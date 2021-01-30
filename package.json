@@ -3,9 +3,11 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www",
-    "build": "npm install",
-    "dev": "DEBUG=ald-monitor:* nodemon ./bin/www"
+    "start": "npm run build-prod && node ./bin/www",
+    "build": "npm install --loglevel=error",
+    "build-prod": "npm install --production --loglevel=error",
+    "dev": "npm run build && DEBUG=ald-monitor:* nodemon ./bin/www",
+    "test": "npm run build && mocha --exit"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -16,6 +18,11 @@
     "morgan": "~1.9.1"
   },
   "devDependencies": {
-    "nodemon": "^2.0.7"
+    "jshint": "^2.12.0",
+    "mocha": "^8.2.1",
+    "mocha-jshint": "^2.3.1",
+    "nodemon": "^2.0.7",
+    "should": "^13.2.3",
+    "supertest": "^6.1.3"
   }
 }
