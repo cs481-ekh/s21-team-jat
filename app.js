@@ -3,7 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-var debug = require('debug')('sc-new:server');
+var debug = require('debug')('ald-monitor:server');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
