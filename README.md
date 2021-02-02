@@ -4,20 +4,29 @@
 Before starting make sure you have the latest stable version of Node.js ([14.15.4](https://nodejs.org/en/download/)) installed.
 ## Building
 To build, run:
-```bash
+```
 npm install
 ```
 or:
-```bash
+```
 npm run build
 ```
 
 ## Running
 Production:
-```bash
+```
+npm run build-prod
 npm start
 ```
+
 Development:
-```bash
+```
+npm run build
 npm run dev
+```
+
+Run tests:
+```
+npm run build
+npm test
 ```

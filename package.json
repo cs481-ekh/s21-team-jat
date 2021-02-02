@@ -3,11 +3,11 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "npm run build-prod && node ./bin/www",
+    "start": "node ./bin/www",
     "build": "npm install --loglevel=error",
     "build-prod": "npm install --production --loglevel=error",
-    "dev": "npm run build && DEBUG=ald-monitor:* nodemon ./bin/www",
-    "test": "npm run build && mocha --exit"
+    "dev": "DEBUG=ald-monitor:* nodemon ./bin/www",
+    "test": "mocha --exit"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
