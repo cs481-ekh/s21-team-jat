@@ -70,6 +70,11 @@ class TestReadData(unittest.TestCase):
 
         self.data_frame_column_checker(exe_table_df_columns, pred, test)
 
+    def test_summary(self):
+        summary = get_summary(read_data.get_summary())
+
+        self.assertTrue(len(summary) > 0, "Summary file contains at least some text")
+
 
 if __name__ == '__main__':
     unittest.main()
