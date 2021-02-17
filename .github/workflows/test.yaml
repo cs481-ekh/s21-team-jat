@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  test:
 
     runs-on: ubuntu-latest
 
@@ -21,10 +21,13 @@ jobs:
       with:
         node-version: 14.x
 
-    - name: Run tests
+    - name: Setup Environment
       run: |
         npm ci
-        sudo apt-get install pip3
+        apt install python3-pip -y
         pip3 install pandas
+
+    - name: Run tests
+      run: |
         npm test
         python3 python/test_read_data_unittest.py
