@@ -24,7 +24,7 @@ jobs:
     - name: Setup Environment
       run: |
         npm ci
-        apt install python3-pip -y
+        sudo apt install python3-pip -y
         pip3 install pandas
 
     - name: Run tests
