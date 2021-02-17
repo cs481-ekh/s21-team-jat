@@ -1,5 +1,6 @@
 # ALD Process Monitoring Web Application
 ![Mocha Tests](https://github.com/cs481-ekh/s21-team-jat/workflows/Mocha%20Tests/badge.svg)
+![Deploy to Docker Hub](https://github.com/cs481-ekh/s21-team-jat/workflows/Deploy%20to%20Docker%20Hub/badge.svg)
 
 Before starting make sure you have the latest stable version of Node.js ([14.15.4](https://nodejs.org/en/download/)) installed.
 ## Building
