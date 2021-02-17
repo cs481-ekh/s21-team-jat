@@ -1,3 +1,3 @@
 #!/bin/bash
-npm install && exit 0
+npm install --loglevel=error && pip3 install pandas && exit 0
 exit 127
