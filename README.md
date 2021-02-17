@@ -30,3 +30,5 @@ Run tests:
 npm run build
 npm test
 ```
+
+See the [wiki](https://github.com/cs481-ekh/s21-team-jat/wiki) for more detailed documentation.
