@@ -68,13 +68,15 @@ class ReadData:
         return self.summary.string
 
 
+encodings = ['latin1', 'iso-8859-1', 'cp1252', 'utf-8', 'ascii']
+
+
 def get_file_df(file):
     """
     Creates the data frame from the passed in file. Used to help the collection of data
     :param file: The data file to be processed
     :return: A data frame of that file
     """
-    encodings = ['latin1', 'iso-8859-1', 'cp1252']
     df = []
     for code in encodings:
         try:
@@ -92,8 +94,13 @@ def get_summary(file):
     :return: A string of the summary file
     """
     text = []
-    with open(file, 'r') as summary:
-        text = summary.read().replace('\n', '')
+    for code in encodings:
+        try:
+            with open(file, 'r', encoding=code) as summary:
+                text = summary.read().replace('\n', '')
+                break
+        except UnicodeDecodeError:
+            print(code + " unsuccessful as a decoder. Trying next one")
     return text
 
 
