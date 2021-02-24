@@ -10,6 +10,7 @@
     "test": "mocha --exit && python3 python/test_read_data_unittest.py"
   },
   "dependencies": {
+    "connect-ensure-login": "^0.1.1",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "ejs": "~2.6.1",
