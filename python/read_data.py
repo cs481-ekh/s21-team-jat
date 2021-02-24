@@ -1,6 +1,9 @@
 import re
 import sys
 import pandas as pd
+from os import listdir
+from os.path import isfile, join
+import pathlib
 
 
 class ReadData:
@@ -24,20 +27,34 @@ class ReadData:
     -------
     Each attribute has its own getter method used to retrieve the passed in file
     """
-    def __init__(self, args):
+    def __init__(self, test=None):
         """
 
-        :param args: A list of files to be processed and collect data from
+        :param test: Attach any value to run test files.
         """
-        for arg in args:
-            if re.search("Doses-DeltaM.txt", arg):
-                self.doses_deltaM = re.search("Doses-DeltaM.txt", arg)
-            if re.search("DataLog.txt", arg):
-                self.data_log = re.search("DataLog.txt", arg)
-            if re.search("ExecutionTable.txt", arg):
-                self.exe_table = re.search("ExecutionTable.txt", arg)
-            if re.search("Summary.txt", arg):
-                self.summary = re.search("Summary.txt", arg)
+        # Get the path of current working directory, currently works for just test_files
+        # TODO (Future Story) Continue Path checking to determine development environment
+        path_adder_1 = "/test_files"  # Defaults to test_files, will start implementing after Task #50 is completed
+        path_adder_2 = "test_files/"
+        if test is not None:
+            path_adder_1 = "/test_files"
+            path_adder_2 = "test_files/"
+        my_path = pathlib.Path().absolute()
+        my_path = (str(my_path) + path_adder_1)
+        data_files = []
+        # tmp files to add appropriate additional path files for environment
+        tmp_data_files = [f for f in listdir(my_path) if isfile(join(my_path, f))]
+        for f in tmp_data_files:
+            data_files.append(path_adder_2 + (str(f)))
+        for f in data_files:
+            if re.search("Doses-DeltaM.txt", f):
+                self.doses_deltaM = re.search("Doses-DeltaM.txt", f)
+            if re.search("DataLog.txt", f):
+                self.data_log = re.search("DataLog.txt", f)
+            if re.search("ExecutionTable.txt", f):
+                self.exe_table = re.search("ExecutionTable.txt", f)
+            if re.search("Summary.txt", f):
+                self.summary = re.search("Summary.txt", f)
 
     def get_doses_delta(self):
         """
@@ -107,10 +124,9 @@ def get_summary(file):
 def main(args):
     """
     The starting point of the program.
-    :param args: A list of ALD data files to be processed
     :return:
     """
-    read_data = ReadData(sys.argv)
+    read_data = ReadData()
     data_log_df = get_file_df(read_data.get_data_log())
     exe_table_df = get_file_df(read_data.get_exe_table())
     doses_delta_df = get_file_df(read_data.get_doses_delta())
