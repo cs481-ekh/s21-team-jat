@@ -3,13 +3,13 @@ var should = require("should");
 var app = require("../app");
 fs = require('fs');
 
-// This agent refers to PORT where program is runninng.
-var server = supertest.agent(app);
+var noauth = supertest.agent(app); // For testing with no auth
+var auth = supertest.agent(app); // For testing with auth
 
-// All GET methods before authentication
+// All GET methods without authentication
 describe("GET methods, no auth", function () {
   it("returns a 404", function (done) {
-    server.get("/lkamnsdnf")
+    noauth.get("/lkamnsdnf")
       .expect("Content-type", /text\/html/)
       .expect(404)
       .end(function (err, res) {
@@ -22,7 +22,7 @@ describe("GET methods, no auth", function () {
   });
 
   it("renders index.ejs", function (done) {
-    server.get("/")
+    noauth.get("/")
       .expect("Content-type", /text\/html/)
       .expect(200)
       .end(function (err, res) {
@@ -35,7 +35,7 @@ describe("GET methods, no auth", function () {
   });
 
   it("renders login.ejs", function (done) {
-    server.get("/login")
+    noauth.get("/login")
       .expect("Content-type", /text\/html/)
       .expect(200)
       .end(function (err, res) {
@@ -48,7 +48,7 @@ describe("GET methods, no auth", function () {
   });
 
   it("redirects to /login on /users with no auth", function (done) {
-    server.get("/users")
+    noauth.get("/users")
       .expect(302)
       .expect('Location', '/login')
       .end(function (err, res) {
@@ -61,7 +61,7 @@ describe("GET methods, no auth", function () {
   });
 
   it("redirects to /login on /dashboard with no auth", function (done) {
-    server.get("/dashboard")
+    noauth.get("/dashboard")
       .expect(302)
       .expect('Location', '/login')
       .end(function (err, res) {
@@ -78,7 +78,7 @@ describe("GET methods, no auth", function () {
 // Testing /auth
 describe("Auth testing", function () {
   it("renders login.ejs on bad username", function (done) {
-    server.post("/auth")
+    auth.post("/auth")
       .send({
         Username: "aidan1",
         Password: "testpassword"
@@ -95,7 +95,7 @@ describe("Auth testing", function () {
   });
 
   it("renders login.ejs on bad password", function (done) {
-    server.post("/auth")
+    auth.post("/auth")
       .send({
         Username: "aidan",
         Password: "testpassword1"
@@ -112,7 +112,7 @@ describe("Auth testing", function () {
   });
 
   it("good auth redirects to dashboard.ejs", function (done) {
-    server.post("/auth")
+    auth.post("/auth")
       .send({
         Username: "aidan",
         Password: "testpassword"
@@ -128,12 +128,9 @@ describe("Auth testing", function () {
         done();
       });
   });
-});
 
-// Testing authorization
-describe("GET methods, valid auth", function () {
   it("renders /users", function (done) {
-    server.get("/users")
+    auth.get("/users")
       .expect(200)
       .end(function (err, res) {
         if (err) {
@@ -145,7 +142,7 @@ describe("GET methods, valid auth", function () {
   });
 
   it("renders /dashboard", function (done) {
-    server.get("/dashboard")
+    auth.get("/dashboard")
       .expect(200)
       .end(function (err, res) {
         if (err) {
@@ -155,12 +152,9 @@ describe("GET methods, valid auth", function () {
         done();
       });
   });
-});
 
-// Testing log out
-describe("Log out", function () {
   it("logs the user out", function (done) {
-    server.get("/auth/logout")
+    auth.get("/auth/logout")
       .expect(302)
       .expect('Location', '/')
       .end(function (err, res) {
@@ -173,7 +167,7 @@ describe("Log out", function () {
   });
 
   it("ensures no access after log out", function (done) {
-    server.get("/users")
+    auth.get("/users")
       .expect(302)
       .expect('Location', '/login')
       .end(function (err, res) {
@@ -184,10 +178,28 @@ describe("Log out", function () {
         done();
       });
   });
+
+  it("redirects to last page attempted to access (/users)", function (done) {
+    auth.post("/auth")
+      .send({
+        Username: "aidan",
+        Password: "testpassword"
+      })
+      .expect(302)
+      .expect('Location', '/users')
+      .end(function (err, res) {
+        if (err) {
+          return done(err);
+        }
+        res.status.should.equal(302);
+        done();
+      });
+  });
 });
 
+
 // Error testing
-describe("Error testing after logout", function () {
+describe("Misnamed user.json file", function () {
 
   beforeEach(function () {
     fs.rename("users.json", "users1.json", function () {
@@ -196,7 +208,7 @@ describe("Error testing after logout", function () {
   });
 
   it("throws error on bad filename", function (done) {
-    server.post("/auth")
+    noauth.post("/auth")
       .send({
         Username: "aidan",
         Password: "testpassword"
