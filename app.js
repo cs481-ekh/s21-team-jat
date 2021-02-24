@@ -73,7 +73,10 @@ passport.use(new LocalStrategy({
   function (username, password, done) {
     fs.readFile('users.json', function (err, data) {
       if (err) {
-        return res.send(err);
+        return done(err, false, {
+          code: 1,
+          message: 'File read error.'
+        });
       }
 
       var parsed = JSON.parse(data);
@@ -119,12 +122,12 @@ passport.serializeUser(function (user, done) {
 passport.deserializeUser(function (id, done) {
   fs.readFile('users.json', function (err, data) {
     if (err) {
-      return res.send(err);
+      return done(err, false);
     }
 
     var parsed = JSON.parse(data);
 
-    parsed.users.forEach(function (element) { 
+    parsed.users.forEach(function (element) {
       if (element.username == id) {
         done(err, element);
       }
