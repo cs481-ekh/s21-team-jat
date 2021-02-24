@@ -10,7 +10,7 @@ files = ["test_files/20190524_Run1_TMA-H2O-50cycles_TMA-10Pulses_TMA-H2O-20cycle
          "test_files/20190524_Run1_TMA-H2O-50cycles_TMA-10Pulses_TMA-H2O-20cycles_425C_GaPO4_ExecutionTable.txt",
          "test_files/20190524_Run1_TMA-H2O-50cycles_TMA-10Pulses_TMA-H2O-20cycles_425C_GaPO4_Summary.txt"]
 
-read_data = ReadData(files)
+read_data = ReadData(1)
 data_log_df = get_file_df(read_data.get_data_log())
 data_log_columns = ['Timestamp', 'Elapsed Time [s]', 'Chamber Pressure [Torr]', 'Pump Pressure [Torr]',
                     'Xtal OK? [0=F, 1=T]', 'Xtal Life [%]', 'Mass [ng/cm²]', 'Mass Offset [ng/cm²] ',
