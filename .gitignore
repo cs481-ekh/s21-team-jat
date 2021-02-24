@@ -1,4 +1,3 @@
-/node_modules/
-/python/__pycache__/
-/.nyc_output/
-/.idea/
+node_modules
+python/__pycache__
+.nyc_output
