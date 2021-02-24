@@ -34,10 +34,10 @@ class ReadData:
         """
         # Get the path of current working directory, currently works for just test_files
         # TODO (Future Story) Continue Path checking to determine development environment
-        path_adder_1 = "\\test_files"  # Defaults to test_files, will start implementing after Task #50 is completed
+        path_adder_1 = "/test_files"  # Defaults to test_files, will start implementing after Task #50 is completed
         path_adder_2 = "test_files/"
         if test is not None:
-            path_adder_1 = "\\test_files"
+            path_adder_1 = "/test_files"
             path_adder_2 = "test_files/"
         my_path = pathlib.Path().absolute()
         my_path = (str(my_path) + path_adder_1)
