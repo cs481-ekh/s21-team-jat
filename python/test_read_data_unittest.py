@@ -84,8 +84,8 @@ class TestReadData(unittest.TestCase):
         j = get_json(dfs, summary)
         try:
             json_obj = json.loads(j)
-        except ValueError as e:
-            self.assertTrue(0 == 1, "JSON file creation failed")
+        except Exception as e:
+            self.fail("JSON file creation failed")
         return self.assertTrue(0 == 0, "JSON file creation succeeded")
 
 
