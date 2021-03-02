@@ -1,5 +1,6 @@
 import re
 import sys
+import json
 import pandas as pd
 from os import listdir
 from os.path import isfile, join
@@ -114,11 +115,32 @@ def get_summary(file):
     for code in encodings:
         try:
             with open(file, 'r', encoding=code) as summary:
-                text = summary.read().replace('\n', '')
+                text = summary.read().replace('\n', ' ')
                 break
         except UnicodeDecodeError:
             print(code + " unsuccessful as a decoder. Trying next one")
     return text
+
+
+def get_json(dfs, summary):
+    """
+    Creates the data json file
+    :param dfs: List of tuples of data frames to be added to JSON. [(name, df),...]
+    :param summary: Summary text string
+    :return: JSON object
+    """
+    # Create dictionary to add data frames converted to dictionaries
+    dfs_dict = {}
+    for name, df in dfs:
+        dfs_dict[name] = df.to_dict()
+    dfs_dict['summary'] = summary  # Add summary manually
+    json_result = json.dumps(dfs_dict)  # Create JSON
+    """
+    # Uncomment if want to save to a file, data directory will need to be created
+    with open('./data/data.json', 'w', encoding='utf-8') as outfile:
+        json.dump(dfs_dict, outfile)
+    """
+    return json_result
 
 
 def main(args):
@@ -126,11 +148,16 @@ def main(args):
     The starting point of the program.
     :return:
     """
+    num_items = 5  # Number of items to return in JSON
     read_data = ReadData()
     data_log_df = get_file_df(read_data.get_data_log())
     exe_table_df = get_file_df(read_data.get_exe_table())
     doses_delta_df = get_file_df(read_data.get_doses_delta())
     summary = get_summary(read_data.get_summary())
+    # Create list of tuples to pass into get_json
+    dfs = [("data_log", data_log_df[-num_items:]), ("exe_table", exe_table_df[-num_items:]),
+           ("doses_delta", doses_delta_df[-num_items:])]
+    data_json = get_json(dfs, summary)
 
 
 if __name__ == '__main__':

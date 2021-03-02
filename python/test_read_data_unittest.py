@@ -20,8 +20,8 @@ data_log_columns = ['Timestamp', 'Elapsed Time [s]', 'Chamber Pressure [Torr]', 
                     'Mod7/do2', 'Mod7/do3', 'Mod7/do4', 'Mod7/do5', 'Mod7/do6', 'Mod7/do7', 'Mod8/do0', 'Mod8/do1',
                     'Mod8/do2', 'Mod8/do3', 'Mod8/do4', 'Mod8/do5', 'Mod8/do6', 'Mod8/do7']
 
-doses_log_df = get_file_df(read_data.get_doses_delta())
-doses_log_df_columns = ['Recipe Step #', 'Precursor #', 'Precursor Name', 'ALD Process Type',
+doses_delta_df = get_file_df(read_data.get_doses_delta())
+doses_delta_df_columns = ['Recipe Step #', 'Precursor #', 'Precursor Name', 'ALD Process Type',
                         'Pulse/Fill Start Timestamp', 'Pulse/Fill Start Elapsed Time [s]',
                         'Hold Start Timestamp', 'Hold Start Elapsed Time [s]',
                         'Purge Start Timestamp', 'Purge Start Elapsed Time [s]',
@@ -60,10 +60,10 @@ class TestReadData(unittest.TestCase):
         self.data_frame_column_checker(data_log_columns, pred, test)
 
     def test_doses_delta_columns(self):
-        pred = sorted(doses_log_df.columns)
-        test = sorted(doses_log_df_columns)
+        pred = sorted(doses_delta_df.columns)
+        test = sorted(doses_delta_df_columns)
 
-        self.data_frame_column_checker(doses_log_df_columns, pred, test)
+        self.data_frame_column_checker(doses_delta_df_columns, pred, test)
 
     def test_exe_table_columns(self):
         pred = sorted(exe_table_df)
@@ -75,6 +75,18 @@ class TestReadData(unittest.TestCase):
         summary = get_summary(read_data.get_summary())
 
         self.assertTrue(len(summary) > 0, "Summary file contains at least some text")
+
+    def test_json(self):
+        summary = get_summary(read_data.get_summary())
+        num_items = 5;
+        dfs = [("data_log", data_log_df[-num_items:]), ("exe_table", exe_table_df[-num_items:]),
+               ("doses_delta", doses_delta_df[-num_items:])]
+        j = get_json(dfs, summary)
+        try:
+            json_obj = json.loads(j)
+        except ValueError as e:
+            self.assertTrue(0 == 1, "JSON file creation failed")
+        return self.assertTrue(0 == 0, "JSON file creation succeeded")
 
 
 if __name__ == '__main__':
