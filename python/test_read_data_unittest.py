@@ -82,7 +82,7 @@ class TestReadData(unittest.TestCase):
         num_items = 5;
         dfs = [("data_log", data_log_df[-num_items:]), ("exe_table", exe_table_df[-num_items:]),
                ("doses_delta", doses_delta_df[-num_items:])]
-        j = get_json(dfs, summary)
+        j = get_json(dfs, summary, "test_data.json")
         try:
             json_obj = json.loads(j)
         except Exception as e:
@@ -94,7 +94,7 @@ class TestReadData(unittest.TestCase):
         num_items = 5;
         dfs = [("data_log", data_log_df[-num_items:]), ("exe_table", exe_table_df[-num_items:]),
                ("doses_delta", doses_delta_df[-num_items:])]
-        j = get_json(dfs, summary)
+        j = get_json(dfs, summary, "test_data.json")
         self.assertTrue(path.exists("data_json/data.json"), "Data.json file exists")
 
 
