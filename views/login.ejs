@@ -1,19 +1,69 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 
 <head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="login" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: Arial;
+    }
 
-  <title>Log in</title>
+    form {
+      border: 5px solid #f3f3f3;
+    }
+
+    input[type=text],
+    input[type=password] {
+      width: 100%;
+      padding: 14px 22px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 14px 22px;
+      margin: 6px 0;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    button:hover {
+      opacity: 0.7;
+    }
+
+    span.psw {
+      float: right;
+      padding-top: 16px;
+    }
+  </style>
 </head>
 
 <body>
-  <h1>Log in</h1>
-  <% if (error) { %>
-  <p>Error logging in: <%= error.message %> </p>
-  <% } %>
+
+  <h2>ALD Remote View</h2>
+
+  <form action="/auth" method="post">
+    <div class="imgcontainer">
+      <img src="/images/bsulogo.png" alt="logo" class="logo">
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="Username" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="Password" required>
+
+      <button type="submit">Login</button>
+
+    </div>
+  </form>
+
 </body>
 
 </html>
