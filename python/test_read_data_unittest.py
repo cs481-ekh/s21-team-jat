@@ -1,7 +1,8 @@
 # Unit Test File
 # run from /s21-team-jat/.
 import unittest
-import os
+import os.path
+from os import path
 import re
 from read_data import *
 
@@ -86,7 +87,15 @@ class TestReadData(unittest.TestCase):
             json_obj = json.loads(j)
         except Exception as e:
             self.fail("JSON file creation failed")
-        return self.assertTrue(0 == 0, "JSON file creation succeeded")
+        self.assertTrue(0 == 0, "JSON file creation succeeded")
+
+    def test_json_file(self):
+        summary = get_summary(read_data.get_summary())
+        num_items = 5;
+        dfs = [("data_log", data_log_df[-num_items:]), ("exe_table", exe_table_df[-num_items:]),
+               ("doses_delta", doses_delta_df[-num_items:])]
+        j = get_json(dfs, summary)
+        self.assertTrue(path.exists("data_json/data.json"), "Data.json file exists")
 
 
 if __name__ == '__main__':

@@ -135,11 +135,9 @@ def get_json(dfs, summary):
         dfs_dict[name] = df.to_dict()
     dfs_dict['summary'] = summary  # Add summary manually
     json_result = json.dumps(dfs_dict)  # Create JSON
-    """
-    # Uncomment if want to save to a file, data directory will need to be created
-    with open('./data/data.json', 'w', encoding='utf-8') as outfile:
+    with open('./data_json/data.json', 'w', encoding='utf-8') as outfile:
         json.dump(dfs_dict, outfile)
-    """
+
     return json_result
 
 
