@@ -122,11 +122,12 @@ def get_summary(file):
     return text
 
 
-def get_json(dfs, summary):
+def get_json(dfs, summary, file_name):
     """
     Creates the data json file
     :param dfs: List of tuples of data frames to be added to JSON. [(name, df),...]
     :param summary: Summary text string
+    :param: name: Name of JSON file, no path needed
     :return: JSON object
     """
     # Create dictionary to add data frames converted to dictionaries
@@ -135,11 +136,9 @@ def get_json(dfs, summary):
         dfs_dict[name] = df.to_dict()
     dfs_dict['summary'] = summary  # Add summary manually
     json_result = json.dumps(dfs_dict)  # Create JSON
-    """
-    # Uncomment if want to save to a file, data directory will need to be created
-    with open('./data/data.json', 'w', encoding='utf-8') as outfile:
+    with open('./data_json/'+file_name, 'w', encoding='utf-8') as outfile:
         json.dump(dfs_dict, outfile)
-    """
+
     return json_result
 
 
@@ -157,7 +156,7 @@ def main(args):
     # Create list of tuples to pass into get_json
     dfs = [("data_log", data_log_df[-num_items:]), ("exe_table", exe_table_df[-num_items:]),
            ("doses_delta", doses_delta_df[-num_items:])]
-    data_json = get_json(dfs, summary)
+    data_json = get_json(dfs, summary, "data.json")
 
 
 if __name__ == '__main__':
