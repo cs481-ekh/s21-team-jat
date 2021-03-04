@@ -6,11 +6,35 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
   <title>Dashboard</title>
 </head>
 
 <body>
-  <h1>Dashboard</h1>
+  <div class="container">
+    <h1>Dashboard</h1>
+    <hr>
+    <p>Timestamp: <%= data.data_log.Timestamp['9445'] %></p>
+    <p>Elapsed time: <%= data.data_log['Elapsed Time [s]']['9445'] + " s" %></p>
+    <p>Chamber Pressure: <%= data.data_log['Chamber Pressure [Torr]']['9445'] + " Torr" %></p>
+    <p>Pump Pressure:
+      <%= data.data_log['Pump Pressure [Torr]']['9445'].includes("null") ? "N/A" : data.data_log['Pump Pressure [Torr]']['9445'] + " Torr" %>
+    </p>
+    <p>Xtal OK?: <%= data.data_log['Xtal OK? [0=F, 1=T]']['9445'] === 1 ? "Yes" : "No" %></p>
+    <p>Xtal Life: <%= data.data_log['Xtal Life [%]']['9445'] + "%" %></p>
+    <p>Mass: <%= data.data_log['Mass [ng/cm²]']['9445'] + " ng/cm²" %></p>
+    <p>Mass Offset: <%= data.data_log['Mass Offset [ng/cm²] ']['9445'] + " ng/cm²" %></p>
+    <p>Frequency: <%= data.data_log['Frequency [Hz]']['9445'] + " Hz" %></p>
+    <p>MFC 1 Flow: <%= data.data_log['MFC 1 Flow [sccm]']['9445'] + " sccm" %></p>
+  </div>
+
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+  </script>
 </body>
 
 </html>
