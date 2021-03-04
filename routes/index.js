@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var cel = require('connect-ensure-login');
+var fs = require('fs');
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
@@ -10,7 +11,15 @@ router.get('/', function (req, res, next) {
 });
 
 router.get('/dashboard', cel.ensureLoggedIn("/login"), function (req, res) {
-  res.render('dashboard');
+
+  fs.readFile('data_json/data.json', function (err, data) {
+    var jsonData = data;
+
+    var parsed = JSON.parse(jsonData);
+
+    res.locals.data = parsed;
+    res.render('dashboard');
+  });
 });
 
 router.get('/login', function (req, res) {
