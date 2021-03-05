@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="generator" content="CoffeeCup HTML Editor (www.coffeecup.com)">
+    <meta name="dcterms.created" content="Fri, 05 Mar 2021 18:40:33 GMT">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>Interface</title>
+    
+    <style type="text/css">
+    <!--
+    body {
+      color:#000000;
+      background-color:#B3B3B3;
+      background-image:url('Background Image');
+      background-repeat:no-repeat;
+    }
+    a  { color:#0000FF; }
+    a:visited { color:#800080; }
+    a:hover { color:#008000; }
+    a:active { color:#FF0000; }
+    -->
+	.container {
+     border-radius: 5px;
+     background-color: #f2f2f2;
+     padding: 20px;
+     }
+	 label{
+	 background-color: #e5e5e5;
+	 }
+	 label2{
+	 background-color: red;
+	 display: inline-block;
+	 margin-left: 15%;
+	 margin-top: 0;
+	 display: inline-block; width:47%;
+	 .cf-medium {width:97%;)
+	 }
+    </style>
+
+  </head>
+  <body>
+  		<div class="container">
+			 <form action="/action_page.php">
+			 <p>Precursors</p>
+  			 <label for="A1">A1</label>  
+  			 <input type="text" id="A1" name="A1" value="temp" readonly><br><br>
+			 <label for="A2">A2</label>  
+  			 <input type="text" id="A2" name="A2" value="temp" readonly><br><br>
+			 <label for="A3">A3</label>  
+  			 <input type="text" id="A3" name="A3" value="temp" readonly><br><br>
+			 <label for="B1">B1</label>  
+  			 <input type="text" id="B1" name="B1" value="temp" readonly><br><br>
+			 </form>
+  		</div>
+  		<div class="container">
+			 <form action="/action_page.php">
+  			 <label for="ALDProcessStatus">ALD Process Status:</label>  
+  			 <input type="text" id="ALDProcessStatus" name="ALD Process Status" value="temp" readonly><br><br>
+			 <label for="StepsCompleted">Steps Completed:</label>  
+  			 <input type="text" id="StepsCompleted" name="StepsCompleted" value="temp" readonly><br><br>
+			 </form>
+  		</div>
+  </body>
+</html>
