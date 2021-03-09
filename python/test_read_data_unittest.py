@@ -50,6 +50,7 @@ class TestReadData(unittest.TestCase):
     def data_frame_column_checker(self, df_cols, pred, test):
         for i, col in enumerate(df_cols):
             pred[i] = pred[i].replace("ï¿½", "^2")
+            pred[i] = pred[i].replace("²", "^2")
             if pred[i] != test[i]:
                 self.assertEqual(pred[i], test[i], '\''+pred[i]+"\' found in columns. Doesn't match "
                                                                 "with test value of \'"+test[i]+'\'')

@@ -112,10 +112,10 @@ def get_file_df(file):
             cols = (df.columns.tolist())
             # Replace messy values in the rows
             df[cols] = df[cols].replace({'   NaN': 'NaN', np.nan: 'NaN', "ï¿½": "²"})
-            for col in cols:
-                # Rename column name, not necessary currently
-                t = col.replace("ï¿½", "²")
-                df.rename(columns={col: t})
+            # for col in cols:
+            #   Rename column name, not necessary currently
+            #   t = col.replace("ï¿½", "²")
+            #   df.rename(columns={col: t})
             break
         except UnicodeDecodeError:
             print(code+" unsuccessful as a decoder. Trying next one")
@@ -154,9 +154,14 @@ def get_json(dfs, summary, file_name):
         # Temporary dictionary to help replace invalid characters currently in dictionaries
         final_dict = {}
         for tmp in dic:
-            # Python one-liner, it creates a new dictionary object if it finds the current key contains
+            t = {}
+            code = "ï¿½"
+            for key, v in tmp.items():
+                if key.find("²") != -1:
+                    code = "²"
+            # This creates a new dictionary object if it finds the current key contains
             # ï¿½ (aka ²) and replaces it with ^2. If those characters aren't found, nothing is done
-            t = {k[0:k.find("ï¿½")] + "^2"+k[k.find("ï¿½")+3:] if k.find("ï¿½") != -1 else k: v for k, v in tmp.items()}
+            t = {k[0:k.find(code)] + "^2"+k[k.find(code)+3:] if k.find(code) != -1 else k: v for k, v in tmp.items()}
             final_dict.update(t)
         # Set the dictionary for the current name
         dfs_dict[name] = final_dict
