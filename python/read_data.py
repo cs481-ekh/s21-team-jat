@@ -112,10 +112,18 @@ def get_file_df(file):
             cols = (df.columns.tolist())
             # Replace messy values in the rows
             df[cols] = df[cols].replace({'   NaN': 'NaN', np.nan: 'NaN', "ï¿½": "²"})
-            # for col in cols:
-            #   Rename column name, not necessary currently
-            #   t = col.replace("ï¿½", "²")
-            #   df.rename(columns={col: t})
+            df.replace(r'\s\s+', '', regex=True, inplace=True)
+
+            for col in cols:
+                t = col
+                # Rename column name, not necessary currently
+                index = t.find("[")
+                if index == -1:
+                    index = t.find("(")
+                if index != -1:
+                    t = t[0:index-1]
+
+                df = df.rename(columns={col: t})
             break
         except UnicodeDecodeError:
             print(code+" unsuccessful as a decoder. Trying next one")
@@ -152,6 +160,7 @@ def get_json(dfs, summary, file_name):
     for name, df in dfs:
         dic = df.to_dict(orient='records')
         # Temporary dictionary to help replace invalid characters currently in dictionaries
+        """
         final_dict = {}
         for tmp in dic:
             t = {}
@@ -161,10 +170,12 @@ def get_json(dfs, summary, file_name):
                     code = "²"
             # This creates a new dictionary object if it finds the current key contains
             # ï¿½ (aka ²) and replaces it with ^2. If those characters aren't found, nothing is done
-            t = {k[0:k.find(code)] + "^2"+k[k.find(code)+3:] if k.find(code) != -1 else k: v for k, v in tmp.items()}
-            final_dict.update(t)
+            t = {k[0:k.find("ï¿½")] + "^2" + k[k.find("ï¿½") + 3:] if k.find("ï¿½") != -1 else k: v for k, v in
+                 tmp.items()}
+            final_dict.update(t3)
+            """
         # Set the dictionary for the current name
-        dfs_dict[name] = final_dict
+        dfs_dict[name] = dic
     dfs_dict['summary'] = summary  # Add summary manually
     dfs_dict['timestamp'] = str(datetime.fromtimestamp(time.time()))
     with open('./data_json/'+file_name, 'w', encoding='utf-8') as outfile:
@@ -180,7 +191,7 @@ def main(args):
     """
     while True:
         num_items = 1  # Number of items to return in JSON
-        read_data = ReadData(args)
+        read_data = ReadData() if len(args) == 1 else ReadData(args)
         data_log_df = get_file_df(read_data.get_data_log())
         exe_table_df = get_file_df(read_data.get_exe_table())
         doses_delta_df = get_file_df(read_data.get_doses_delta())
