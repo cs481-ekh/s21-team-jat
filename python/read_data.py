@@ -154,11 +154,10 @@ def get_json(dfs, summary, file_name):
         # Temporary dictionary to help replace invalid characters currently in dictionaries
         final_dict = {}
         for tmp in dic:
-            for old_key in tmp:
-                # Python one-liner, it creates a new dictionary object if it finds the current key contains
-                # ï¿½ (aka ²) and replaces it with ^2. If those characters aren't found, nothing is done
-                t = {k[0:k.find("ï¿½")] + "^2"+k[k.find("ï¿½")+3:] if k.find("ï¿½") != -1 else k: v for k, v in tmp.items()}
-                final_dict.update(t)
+            # Python one-liner, it creates a new dictionary object if it finds the current key contains
+            # ï¿½ (aka ²) and replaces it with ^2. If those characters aren't found, nothing is done
+            t = {k[0:k.find("ï¿½")] + "^2"+k[k.find("ï¿½")+3:] if k.find("ï¿½") != -1 else k: v for k, v in tmp.items()}
+            final_dict.update(t)
         # Set the dictionary for the current name
         dfs_dict[name] = final_dict
     dfs_dict['summary'] = summary  # Add summary manually
