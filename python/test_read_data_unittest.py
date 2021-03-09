@@ -14,10 +14,10 @@ files = ["test_files/20190524_Run1_TMA-H2O-50cycles_TMA-10Pulses_TMA-H2O-20cycle
 read_data = ReadData(1)
 data_log_df = get_file_df(read_data.get_data_log())
 data_log_columns = ['Timestamp', 'Elapsed Time [s]', 'Chamber Pressure [Torr]', 'Pump Pressure [Torr]',
-                    'Xtal OK? [0=F, 1=T]', 'Xtal Life [%]', 'Mass [ng/cm²]', 'Mass Offset [ng/cm²] ',
+                    'Xtal OK? [0=F, 1=T]', 'Xtal Life [%]', 'Mass [ng/cm^2]', 'Mass Offset [ng/cm^2] ',
                     'Frequency [Hz]', 'MFC 1 Flow [sccm]', 'MFC 2 Flow [sccm]', 'MFC 3 Flow [sccm]',
-                    'MFC 4 Flow [sccm]', 'MFC 5 Flow [sccm]', 'Thermocouple 1 [ºC]', 'Thermocouple 2 [ºC]',
-                    'Thermocouple 3 [ºC]', 'Thermocouple 4 [ºC]', 'Iteration Duration (s)', 'Mod7/do0', 'Mod7/do1',
+                    'MFC 4 Flow [sccm]', 'MFC 5 Flow [sccm]', 'Thermocouple 1 [^2C]', 'Thermocouple 2 [^2C]',
+                    'Thermocouple 3 [^2C]', 'Thermocouple 4 [^2C]', 'Iteration Duration (s)', 'Mod7/do0', 'Mod7/do1',
                     'Mod7/do2', 'Mod7/do3', 'Mod7/do4', 'Mod7/do5', 'Mod7/do6', 'Mod7/do7', 'Mod8/do0', 'Mod8/do1',
                     'Mod8/do2', 'Mod8/do3', 'Mod8/do4', 'Mod8/do5', 'Mod8/do6', 'Mod8/do7']
 
@@ -26,7 +26,7 @@ doses_delta_df_columns = ['Recipe Step #', 'Precursor #', 'Precursor Name', 'ALD
                         'Pulse/Fill Start Timestamp', 'Pulse/Fill Start Elapsed Time [s]',
                         'Hold Start Timestamp', 'Hold Start Elapsed Time [s]',
                         'Purge Start Timestamp', 'Purge Start Elapsed Time [s]',
-                        'Initial Mass [ng/cm²]', 'Final Mass [ng/cm²]', 'delta-M [ng/cm²]']
+                        'Initial Mass [ng/cm^2]', 'Final Mass [ng/cm^2]', 'delta-M [ng/cm^2]']
 
 exe_table_df = get_file_df(read_data.get_exe_table())
 exe_table_df_columns = ['Recipe Step', 'Precursor', 'Fill Pressure [Torr]', 'Dose Time [s]',
@@ -49,6 +49,7 @@ class TestReadData(unittest.TestCase):
 
     def data_frame_column_checker(self, df_cols, pred, test):
         for i, col in enumerate(df_cols):
+            pred[i] = pred[i].replace("ï¿½", "^2")
             if pred[i] != test[i]:
                 self.assertEqual(pred[i], test[i], '\''+pred[i]+"\' found in columns. Doesn't match "
                                                                 "with test value of \'"+test[i]+'\'')
@@ -79,7 +80,7 @@ class TestReadData(unittest.TestCase):
 
     def test_json(self):
         summary = get_summary(read_data.get_summary())
-        num_items = 5;
+        num_items = 1;
         dfs = [("data_log", data_log_df[-num_items:]), ("exe_table", exe_table_df[-num_items:]),
                ("doses_delta", doses_delta_df[-num_items:])]
         j = get_json(dfs, summary, "test_data.json")
@@ -91,11 +92,35 @@ class TestReadData(unittest.TestCase):
 
     def test_json_file(self):
         summary = get_summary(read_data.get_summary())
-        num_items = 5;
+        num_items = 1;
         dfs = [("data_log", data_log_df[-num_items:]), ("exe_table", exe_table_df[-num_items:]),
                ("doses_delta", doses_delta_df[-num_items:])]
         j = get_json(dfs, summary, "test_data.json")
         self.assertTrue(path.exists("data_json/data.json"), "Data.json file exists")
+
+    def test_data_json_file_update(self):
+        count = 0
+        first_time = []
+        second_time = []
+        while count < 2:
+            data_read_data = ReadData()
+            summary = get_summary(data_read_data.get_summary())
+            num_items = 1;
+            data_data_log_df = get_file_df(data_read_data.get_data_log())
+            data_doses_delta_df = get_file_df(data_read_data.get_doses_delta())
+            data_exe_table_df = get_file_df(data_read_data.get_exe_table())
+            dfs = [("data_log", data_data_log_df[-num_items:]), ("exe_table", data_exe_table_df[-num_items:]),
+                   ("doses_delta", data_doses_delta_df[-num_items:])]
+            data_read_data.json = get_json(dfs, summary, "data.json")
+            count += 1
+            if count == 1:
+                tmp = json.loads(data_read_data.json)
+                first_time = tmp['timestamp']
+                time.sleep(5)
+            elif count == 2:
+                tmp = json.loads(data_read_data.json)
+                second_time = tmp['timestamp']
+        self.assertTrue(first_time != second_time, "New file was created with a new time stamp")
 
 
 if __name__ == '__main__':

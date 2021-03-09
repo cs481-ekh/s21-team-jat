@@ -1,10 +1,13 @@
+import json
 import re
 import sys
-import json
 import pandas as pd
+import numpy as np
+import pathlib
+import time
+from datetime import datetime
 from os import listdir
 from os.path import isfile, join
-import pathlib
 
 
 class ReadData:
@@ -15,18 +18,22 @@ class ReadData:
     ...
     Attributes
     ----------
-    doses_deltaM    :   str
+    doses_deltaM    :   Regular Expression Match Object
         a string that contains the path and file to the XXXX_Doses-DeltaM.txt
-    data_log    :   str
+    data_log    :   Regular Expression Match Object
         a string that contains the path and file to the XXXX_DataLog.txt
-    exe_table    :   str
+    exe_table    :   Regular Expression Match Object
         a string that contains the path and file to the XXXX_ExecutionTable.txt
-    summary    :   str
+    summary    :   Regular Expression Match Object
         a string that contains the path and file to the XXXX_Summary.txt
+    json       :   JSON
+        The data json file that contains the data
+    json_name       :   str
+        Name of the JSON file
 
     Methods
     -------
-    Each attribute has its own getter method used to retrieve the passed in file
+    The attributes each have their own getter and setter methods.
     """
     def __init__(self, test=None):
         """
@@ -37,9 +44,11 @@ class ReadData:
         # TODO (Future Story) Continue Path checking to determine development environment
         path_adder_1 = "/test_files"  # Defaults to test_files, will start implementing after Task #50 is completed
         path_adder_2 = "test_files/"
+        self.json_name = "data.json"
         if test is not None:
             path_adder_1 = "/test_files"
             path_adder_2 = "test_files/"
+            self.json_name = "test_data.json"
         my_path = pathlib.Path().absolute()
         my_path = (str(my_path) + path_adder_1)
         data_files = []
@@ -56,6 +65,7 @@ class ReadData:
                 self.exe_table = re.search("ExecutionTable.txt", f)
             if re.search("Summary.txt", f):
                 self.summary = re.search("Summary.txt", f)
+        self.json = '{}'
 
     def get_doses_delta(self):
         """
@@ -99,6 +109,13 @@ def get_file_df(file):
     for code in encodings:
         try:
             df = pd.read_csv(file, delimiter='\t', encoding=code, skiprows=[0])
+            cols = (df.columns.tolist())
+            # Replace messy values in the rows
+            df[cols] = df[cols].replace({'   NaN': 'NaN', np.nan: 'NaN', "ï¿½": "²"})
+            for col in cols:
+                # Rename column name, not necessary currently
+                t = col.replace("ï¿½", "²")
+                df.rename(columns={col: t})
             break
         except UnicodeDecodeError:
             print(code+" unsuccessful as a decoder. Trying next one")
@@ -115,7 +132,7 @@ def get_summary(file):
     for code in encodings:
         try:
             with open(file, 'r', encoding=code) as summary:
-                text = summary.read().replace('\n', ' ')
+                text = summary.read().replace("ï¿½", "^2")
                 break
         except UnicodeDecodeError:
             print(code + " unsuccessful as a decoder. Trying next one")
@@ -125,38 +142,51 @@ def get_summary(file):
 def get_json(dfs, summary, file_name):
     """
     Creates the data json file
+    :param file_name: Name of JSON file, no path needed
     :param dfs: List of tuples of data frames to be added to JSON. [(name, df),...]
     :param summary: Summary text string
-    :param: name: Name of JSON file, no path needed
     :return: JSON object
     """
     # Create dictionary to add data frames converted to dictionaries
     dfs_dict = {}
     for name, df in dfs:
-        dfs_dict[name] = df.to_dict()
+        dic = df.to_dict(orient='records')
+        # Temporary dictionary to help replace invalid characters currently in dictionaries
+        final_dict = {}
+        for tmp in dic:
+            for old_key in tmp:
+                # Python one-liner, it creates a new dictionary object if it finds the current key contains
+                # ï¿½ (aka ²) and replaces it with ^2. If those characters aren't found, nothing is done
+                t = {k[0:k.find("ï¿½")] + "^2"+k[k.find("ï¿½")+3:] if k.find("ï¿½") != -1 else k: v for k, v in tmp.items()}
+                final_dict.update(t)
+        # Set the dictionary for the current name
+        dfs_dict[name] = final_dict
     dfs_dict['summary'] = summary  # Add summary manually
-    json_result = json.dumps(dfs_dict)  # Create JSON
+    dfs_dict['timestamp'] = str(datetime.fromtimestamp(time.time()))
     with open('./data_json/'+file_name, 'w', encoding='utf-8') as outfile:
-        json.dump(dfs_dict, outfile)
+        json.dump(dfs_dict, outfile, indent=4)
 
+    json_result = json.dumps(dfs_dict, indent=4)  # Create JSON
     return json_result
 
 
 def main(args):
     """
     The starting point of the program.
-    :return:
     """
-    num_items = 5  # Number of items to return in JSON
-    read_data = ReadData()
-    data_log_df = get_file_df(read_data.get_data_log())
-    exe_table_df = get_file_df(read_data.get_exe_table())
-    doses_delta_df = get_file_df(read_data.get_doses_delta())
-    summary = get_summary(read_data.get_summary())
-    # Create list of tuples to pass into get_json
-    dfs = [("data_log", data_log_df[-num_items:]), ("exe_table", exe_table_df[-num_items:]),
-           ("doses_delta", doses_delta_df[-num_items:])]
-    data_json = get_json(dfs, summary, "data.json")
+    while True:
+        num_items = 1  # Number of items to return in JSON
+        read_data = ReadData(args)
+        data_log_df = get_file_df(read_data.get_data_log())
+        exe_table_df = get_file_df(read_data.get_exe_table())
+        doses_delta_df = get_file_df(read_data.get_doses_delta())
+        summary = get_summary(read_data.get_summary())
+        # Create list of tuples to pass into get_json
+        dfs = [("data_log", data_log_df[-num_items:]), ("exe_table", exe_table_df[-num_items:]),
+               ("doses_delta", doses_delta_df[-num_items:])]
+        data_json = get_json(dfs, summary, read_data.json_name)
+        read_data.json = data_json
+        time.sleep(5)
 
 
 if __name__ == '__main__':
