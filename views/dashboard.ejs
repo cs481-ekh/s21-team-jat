@@ -15,20 +15,64 @@
 
 <body>
   <div class="container">
-    <h1>Dashboard</h1>
+    <h1 class="mt-3">Dashboard</h1>
+    <div class="text-end">
+      <a href="/auth/logout" class="btn btn-danger">Log out</a>
+    </div>
     <hr>
-    <p>Timestamp: <%= data.data_log.Timestamp['9445'] %></p>
-    <p>Elapsed time: <%= data.data_log['Elapsed Time [s]']['9445'] + " s" %></p>
-    <p>Chamber Pressure: <%= data.data_log['Chamber Pressure [Torr]']['9445'] + " Torr" %></p>
-    <p>Pump Pressure:
-      <%= data.data_log['Pump Pressure [Torr]']['9445'].includes("null") ? "N/A" : data.data_log['Pump Pressure [Torr]']['9445'] + " Torr" %>
-    </p>
-    <p>Xtal OK?: <%= data.data_log['Xtal OK? [0=F, 1=T]']['9445'] === 1 ? "Yes" : "No" %></p>
-    <p>Xtal Life: <%= data.data_log['Xtal Life [%]']['9445'] + "%" %></p>
-    <p>Mass: <%= data.data_log['Mass [ng/cm²]']['9445'] + " ng/cm²" %></p>
-    <p>Mass Offset: <%= data.data_log['Mass Offset [ng/cm²] ']['9445'] + " ng/cm²" %></p>
-    <p>Frequency: <%= data.data_log['Frequency [Hz]']['9445'] + " Hz" %></p>
-    <p>MFC 1 Flow: <%= data.data_log['MFC 1 Flow [sccm]']['9445'] + " sccm" %></p>
+
+    <div class="row">
+      <div class="col-md">
+        <h2 class="mb-3">Data Log:</h2>
+        <% Object.entries(data.data_log[0]).forEach(function([key, value]){ %>
+
+        <% 
+          if(typeof(value) === 'string' && value.includes("NaN")){
+            value = "N/A";
+          } 
+        %>
+
+        <p><%= key + ": " + value %></p>
+
+        <% }); %>
+      </div>
+
+      <div class="col-md">
+        <h2 class="mb-3">Exe Table:</h2>
+        <% Object.entries(data.exe_table[0]).forEach(function([key, value]){ %>
+
+        <% 
+          if(typeof(value) === 'string' && value.includes("NaN")){
+            value = "N/A";
+          } 
+        %>
+
+        <p><%= key + ": " + value %></p>
+
+        <% }); %>
+      </div>
+
+      <div class="col-md">
+        <h2 class="mb-3">Doses Delta:</h2>
+        <% Object.entries(data.doses_delta[0]).forEach(function([key, value]){ %>
+
+        <% 
+          if(typeof(value) === 'string' && value.includes("NaN")){
+            value = "N/A";
+          } 
+        %>
+
+        <p><%= key + ": " + value %></p>
+
+        <% }); %>
+      </div>
+    </div>
+
+    <hr>
+    <div class="row">
+      <h2 class="mb-3 mt-3">Summary</h2>
+      <pre><code><%= data.summary %></code></pre>
+    </div>
   </div>
 
   <!-- Option 1: Bootstrap Bundle with Popper -->
