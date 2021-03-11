@@ -1,0 +1,3 @@
+20190524_Run1_TMA-H2O-50cycles_TMA-10Pulses_TMA-H2O-20cycles_425C_GaPO4_DataLog.txt
+Timestamp	Elapsed Time [s]	Chamber Pressure [Torr]	Pump Pressure [Torr]	Xtal OK? [0=F, 1=T]	Xtal Life [%]	Mass [ng/cm�]	Mass Offset [ng/cm�] 	Frequency [Hz]	MFC 1 Flow [sccm]	MFC 2 Flow [sccm]	MFC 3 Flow [sccm]	MFC 4 Flow [sccm]	MFC 5 Flow [sccm]	Thermocouple 1 [�C]	Thermocouple 2 [�C]	Thermocouple 3 [�C]	Thermocouple 4 [�C]	Iteration Duration (s)	Mod7/do0	Mod7/do1	Mod7/do2	Mod7/do3	Mod7/do4	Mod7/do5	Mod7/do6	Mod7/do7	Mod8/do0	Mod8/do1	Mod8/do2	Mod8/do3	Mod8/do4	Mod8/do5	Mod8/do6	Mod8/do7
+11:23:15.059 05/24/2019	    1.069	 1.807	   NaN	1	58	  -36	-98208	5583588.4	 22.7	 22.5	 22.7	 22.7	 20.0	122.3	125.6	 90.3	 22.4	0.050	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0

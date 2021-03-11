@@ -62,6 +62,7 @@ router.get('/dashboard', cel.ensureLoggedIn("/login"), function (req, res) {
 
       // Add freq unit label
       if (key.includes("Frequency")) {
+        value = value.toLocaleString("en-US");
         value += " Hz";
       }
 
