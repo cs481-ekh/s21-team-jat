@@ -1,5 +1,25 @@
 import time
 import shutil
+import signal
+
+
+def interrupt_handler(signal, frame):
+    print("Keyboard interrupt caught")
+    datalogOrig.close()
+    deltaOrig.close()
+    exeOrig.close()
+    shutil.copyfile('test_files_template/data_template.txt',
+                    'test_files/20190524_Run1_TMA-H2O-50cycles_TMA-10Pulses_TMA-H2O-20cycles_425C_GaPO4_DataLog.txt')
+    shutil.copyfile('test_files_template/delta_template.txt',
+                    'test_files/20190524_Run1_TMA-H2O-50cycles_TMA-10Pulses_TMA-H2O-20cycles_425C_GaPO4_Doses-DeltaM.txt')
+    shutil.copyfile('test_files_template/exe_template.txt',
+                    'test_files/20190524_Run1_TMA-H2O-50cycles_TMA-10Pulses_TMA-H2O-20cycles_425C_GaPO4_ExecutionTable.txt')
+    shutil.copyfile('test_files_template/summary_template.txt',
+                    'test_files/20190524_Run1_TMA-H2O-50cycles_TMA-10Pulses_TMA-H2O-20cycles_425C_GaPO4_Summary.txt')
+    exit(0)
+
+
+signal.signal(signal.SIGINT, interrupt_handler)
 
 # Open the original files
 datalogOrig = open(
@@ -59,8 +79,3 @@ while True:
         exe.close()
 
     time.sleep(0.5)
-
-
-datalogOrig.close()
-deltaOrig.close()
-exeOrig.close()
