@@ -6,10 +6,11 @@
     "start": "node ./bin/www",
     "build": "npm install --loglevel=error && pip3 install pandas",
     "build-prod": "npm install --production --loglevel=error",
-    "dev": "DEBUG=ald-monitor:* nodemon ./bin/www",
+    "dev": "DEBUG=ald-monitor:* nodemon --ignore '/data_json/' ./bin/www",
     "test": "nyc mocha --exit && python3 python/test_read_data_unittest.py"
   },
   "dependencies": {
+    "chokidar": "^3.5.1",
     "connect-ensure-login": "^0.1.1",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
