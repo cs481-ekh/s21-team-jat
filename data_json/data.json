@@ -1,25 +1,25 @@
 {
     "data_log": [
         {
-            "Timestamp": "11:23:42.059 05/24/2019",
-            "Elapsed Time": 28.069000000000003,
-            "Chamber Pressure": 1.817,
+            "Timestamp": "11:23:15.059 05/24/2019",
+            "Elapsed Time": 1.069,
+            "Chamber Pressure": 1.807,
             "Pump Pressure": "NaN",
             "Xtal OK?": 1,
             "Xtal Life": 58,
-            "Mass": -37,
+            "Mass": -36,
             "Mass Offset": -98208,
-            "Frequency": 5583588.5,
-            "MFC 1 Flow": 22.9,
+            "Frequency": 5583588.4,
+            "MFC 1 Flow": 22.7,
             "MFC 2 Flow": 22.5,
-            "MFC 3 Flow": 22.2,
-            "MFC 4 Flow": 22.3,
-            "MFC 5 Flow": 20.2,
-            "Thermocouple 1": 122.1,
+            "MFC 3 Flow": 22.7,
+            "MFC 4 Flow": 22.7,
+            "MFC 5 Flow": 20.0,
+            "Thermocouple 1": 122.3,
             "Thermocouple 2": 125.6,
             "Thermocouple 3": 90.3,
             "Thermocouple 4": 22.4,
-            "Iteration Duration": 0.049,
+            "Iteration Duration": 0.05,
             "Mod7/do0": 0,
             "Mod7/do1": 0,
             "Mod7/do2": 0,
@@ -40,31 +40,31 @@
     ],
     "exe_table": [
         {
-            "Recipe Step": 3,
-            "Precursor": "H2O",
+            "Recipe Step": 1,
+            "Precursor": "None",
             "Fill Pressure": "NaN",
-            "Dose Time": 2.0,
-            "Purge Time": 20.0,
-            "ALD Process Type": "1: Pulse-Purge (Full Flow)"
+            "Dose Time": "NaN",
+            "Purge Time": 300.0,
+            "ALD Process Type": "0: Purge"
         }
     ],
     "doses_delta": [
         {
-            "Recipe Step #": 3,
-            "Precursor #": 2,
-            "Precursor Name": "H2O",
-            "ALD Process Type": "1: Pulse-Purge (Full Flow)",
-            "Pulse/Fill Start Timestamp": "11:28:35.196 05/24/2019",
-            "Pulse/Fill Start Elapsed Time": 321.20599999999996,
+            "Recipe Step #": 1,
+            "Precursor #": 0,
+            "Precursor Name": "None",
+            "ALD Process Type": "0: Purge",
+            "Pulse/Fill Start Timestamp": "NaN",
+            "Pulse/Fill Start Elapsed Time": "NaN",
             "Hold Start Timestamp": "NaN",
             "Hold Start Elapsed Time": "NaN",
-            "Purge Start Timestamp": "11:28:37.204 05/24/2019",
-            "Purge Start Elapsed Time": 323.214,
-            "Initial Mass": "-34",
-            "Final Mass": -35,
-            "delta-M": "-1"
+            "Purge Start Timestamp": "11:23:14.139 05/24/2019",
+            "Purge Start Elapsed Time": 0.149,
+            "Initial Mass": "NaN",
+            "Final Mass": -34,
+            "delta-M": "NaN"
         }
     ],
     "summary": "20190524_Run1_TMA-H2O-50cycles_TMA-10Pulses_TMA-H2O-20cycles_425C_GaPO4_Summary.txt\nUser:\tSara Goltry\nFurnace Temp. [\u00baC]:\t425.000000\nNotes:\tAfter overnight temp ramp, QCM mass/freq of the new Piezocryst GaPO4 crystal looked VERY stable (fluctuating by only 10 ng/cm2). Current run is 5 min purge, then 50 cycles TMA (1sec/20sec) + H2O (2sec/20sec), 5 min purge, 10 pulses TMA, 5 min purge, 20 cycles TMA+H2O, 10 min purge. Needle valves on TMA/H2O/QCM all the same as previous runs. (TMA needle valve set to 1.00 or 4 rotations, H2O needle valve set to 1.75 or 7 rotations, QCM back purge set to 0.20.)\nGraph/Process Start Timestamp:   \t11:23:13.990 05/24/2019\nPrecursors:\tA1=TMA, B1=H2O, C2=MoF6, D2=H2S\nProcess End Timestamp:\t12:41:59.331 05/24/2019\nSteps Completed:\t154/154\nALD Process Complete. Data and graphs saved to \tC:\\Users\\MEC104\\Documents\\LabView ALD Run Logs\\20190524_Run1_TMA-H2O-50cycles_TMA-10Pulses_TMA-H2O-20cycles_425C_GaPO4\n",
-    "timestamp": "2021-03-10 23:40:15.910007"
+    "timestamp": "2021-03-11 09:49:32.559896"
 }
