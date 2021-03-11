@@ -61,6 +61,7 @@ chokidar.watch('./data_json/data.json', {
 
       // Add freq unit label
       if (key.includes("Frequency")) {
+        value = value.toLocaleString("en-US");
         value += " Hz";
       }
 
