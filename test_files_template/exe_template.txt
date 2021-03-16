@@ -1,3 +1,0 @@
-20190524_Run1_TMA-H2O-50cycles_TMA-10Pulses_TMA-H2O-20cycles_425C_GaPO4_ExecutionTable.txt
-Recipe Step	Precursor	Fill Pressure [Torr]	Dose Time [s]	Purge Time [s]	ALD Process Type
-       1	None	N/A	N/A	300.00	0: Purge

@@ -1,3 +1,0 @@
-20190524_Run1_TMA-H2O-50cycles_TMA-10Pulses_TMA-H2O-20cycles_425C_GaPO4_Doses-DeltaM.txt
-Recipe Step #	Precursor #	Precursor Name	ALD Process Type	Pulse/Fill Start Timestamp	Pulse/Fill Start Elapsed Time [s]	Hold Start Timestamp	Hold Start Elapsed Time [s]	Purge Start Timestamp	Purge Start Elapsed Time [s]	Initial Mass [ng/cm�]	Final Mass [ng/cm�]	delta-M [ng/cm�]
-1	0	None	0: Purge	NaN	NaN	NaN	NaN	11:23:14.139 05/24/2019	    0.149	  NaN	  -34	  NaN
