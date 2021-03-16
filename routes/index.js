@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var cel = require('connect-ensure-login');
+var parse = require('../parse');
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
@@ -10,7 +11,9 @@ router.get('/', function (req, res, next) {
 });
 
 router.get('/dashboard', cel.ensureLoggedIn("/login"), function (req, res) {
+  res.locals.data = parse();
   res.render('dashboard');
+
 });
 
 router.get('/login', function (req, res) {
