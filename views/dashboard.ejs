@@ -14,12 +14,13 @@
 </head>
 
 <body style="margin:2%;padding:0">
-	<% console.log(data.data_log[0].Timestamp) %>
+	<% console.log(data.data_log[0]) %>
+	<h5> <%= data.data_log[0]['Timestamp'] %> </h5>
 	<div class="row">
 		<div class="col-2">
 			<h2>
 				<form action="/action_page.php">
-					<p>Precursors</p>
+					<p>Precursors A</p>
 					<label for="A1" style="font-size: 20px">A1</label>
 					<input type="text" id="A1" name="A1" style="width: 150px;" value="temp" readonly><br><br>
 					<label for="A2" style="font-size: 20px">A2</label>
@@ -34,13 +35,26 @@
 		<div class="col-2">
 			<h2>
 				<form action="/action_page.php">
-					<p>Precursors</p>
+					<p>Precursors B</p>
 					<label for="B1" style="font-size: 20px">B1</label>
 					<input type="text" id="B1" name="B1" style="width: 150px;" value="temp" readonly><br><br>
 					<label for="B2" style="font-size: 20px">B2</label>
 					<input type="text" id="B2" name="B2" style="width: 150px;" value="temp" readonly><br><br>
 					<label for="B3" style="font-size: 20px">B3</label>
 					<input type="text" id="B3" name="B3" style="width: 150px;" value="temp" readonly><br><br>
+				</form>
+			</h2>
+		</div>
+		<div class="col-3">
+			<h2>
+				<form action="/action_page.php">
+					<p>Precursors C</p>
+					<label for="C1" style="font-size: 20px">B1</label>
+					<input type="text" id="C1" name="C1" style="width: 150px;" value="temp" readonly><br><br>
+					<label for="C2" style="font-size: 20px">B2</label>
+					<input type="text" id="C2" name="C2" style="width: 150px;" value="temp" readonly><br><br>
+					<label for="C3" style="font-size: 20px">B3</label>
+					<input type="text" id="C3" name="C3" style="width: 150px;" value="temp" readonly><br><br>
 				</form>
 			</h2>
 		</div>
