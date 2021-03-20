@@ -14,58 +14,87 @@
 </head>
 
 <body style="margin:2%;padding:0">
-	<% console.log(data.data_log[0]) %>
+	<% console.log(data.exe_table[0]) %>
 	<h5> <%= data.data_log[0]['Timestamp'] %> </h5>
 	<div class="row">
-		<div class="col-2">
+		<div class="text-end">
+      	<a href="/auth/logout" class="btn btn-danger">Log out</a>
+    	</div>
+    	<div class="col-2">
 			<h2>
 				<form action="/action_page.php">
-					<p>Precursors A</p>
-					<label for="A1" style="font-size: 20px">A1</label>
-					<input type="text" id="A1" name="A1" style="width: 150px;" value="temp" readonly><br><br>
-					<label for="A2" style="font-size: 20px">A2</label>
-					<input type="text" id="A2" name="A2" style="width: 150px;" value="temp" readonly><br><br>
-					<label for="A3" style="font-size: 20px">A3</label>
-					<input type="text" id="A3" name="A3" style="width: 150px;" value="temp" readonly><br><br>
-					<label for="A1" style="font-size: 15px">Chamber Pressure </label>
-					<input type="text" id="A1" name="A1" style="width: 150px;" value="<%= data.data_log[0]['Chamber Pressure'] %>" readonly><br><br>
+					<label for="CP" style="font-size: 20px">Chamber Pressure </label>
+					<input type="text" id="CP" name="CP" style="width: 200px;" value="<%= data.data_log[0]['Chamber Pressure'] %>" readonly><br><br>
 				</form>
 			</h2>
 		</div>
 		<div class="col-2">
 			<h2>
 				<form action="/action_page.php">
-					<p>Precursors B</p>
-					<label for="B1" style="font-size: 20px">B1</label>
-					<input type="text" id="B1" name="B1" style="width: 150px;" value="temp" readonly><br><br>
-					<label for="B2" style="font-size: 20px">B2</label>
-					<input type="text" id="B2" name="B2" style="width: 150px;" value="temp" readonly><br><br>
-					<label for="B3" style="font-size: 20px">B3</label>
-					<input type="text" id="B3" name="B3" style="width: 150px;" value="temp" readonly><br><br>
+					<label for="CP" style="font-size: 20px">Mass Change </label>
+					<input type="text" id="CP" name="CP" style="width: 250px;" value="<%= data.data_log[0]['Mass Offset'] %>" readonly><br><br>
 				</form>
 			</h2>
 		</div>
-		<div class="col-3">
+		<div class="col-2">
 			<h2>
 				<form action="/action_page.php">
-					<p>Precursors C</p>
-					<label for="C1" style="font-size: 20px">B1</label>
-					<input type="text" id="C1" name="C1" style="width: 150px;" value="temp" readonly><br><br>
-					<label for="C2" style="font-size: 20px">B2</label>
-					<input type="text" id="C2" name="C2" style="width: 150px;" value="temp" readonly><br><br>
-					<label for="C3" style="font-size: 20px">B3</label>
-					<input type="text" id="C3" name="C3" style="width: 150px;" value="temp" readonly><br><br>
+					<label for="RS" style="font-size: 20px">Recipe Step </label>
+					<input type="text" id="RS" name="RS" style="width: 200px;" value="<%= data.exe_table[0]['Recipe Step'] %>" readonly><br><br>
 				</form>
 			</h2>
 		</div>
-	</div>
-	<div class="col-md-4">
-		<form action="/action_page.php">
-			<label for="ALDProcessStatus">ALD Process Status:</label>
-			<input type="text" id="ALDProcessStatus" name="ALD Process Status" value="temp" readonly><br><br>
-			<label for="StepsCompleted">Steps Completed:</label>
-			<input type="text" id="StepsCompleted" name="StepsCompleted" value="temp" readonly><br><br>
-		</form>
+		<div class="col-6">	</div>
+		<div class="col-6"> 
+			<ul class="nav nav-tabs" id="myTab" role="tablist">
+  				<li class="nav-item">
+    				<a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
+  				</li>
+  				<li class="nav-item">
+    				<a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Profile</a>
+  				</li>
+  				<li class="nav-item">
+		    		<a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
+  				</li>
+			</ul>
+			<div class="tab-content" id="myTabContent">
+  				<div class="tab-pane fade show active" id="precursor" role="tabpanel" aria-labelledby="precursor-tab">
+  					<form action="/action_page.php">
+						<p>Precursors A</p>
+						<label for="A1" style="font-size: 20px">A1</label>
+						<input type="text" id="A1" name="A1" style="width: 150px;" value="<%= data.exe_table[0]['Precursors'] %>" readonly><br><br>
+						<label for="A2" style="font-size: 20px">A2</label>
+						<input type="text" id="A2" name="A2" style="width: 150px;" value="temp" readonly><br><br>
+						<label for="A3" style="font-size: 20px">A3</label>
+						<input type="text" id="A3" name="A3" style="width: 150px;" value="temp" readonly><br><br>
+					</form>
+					<form action="/action_page.php">
+						<p>Precursors B</p>
+						<label for="B1" style="font-size: 20px">B1</label>
+						<input type="text" id="B1" name="B1" style="width: 150px;" value="temp" readonly><br><br>
+						<label for="B2" style="font-size: 20px">B2</label>
+						<input type="text" id="B2" name="B2" style="width: 150px;" value="temp" readonly><br><br>
+						<label for="B3" style="font-size: 20px">B3</label>
+						<input type="text" id="B3" name="B3" style="width: 150px;" value="temp" readonly><br><br>
+					</form>
+					<form action="/action_page.php">
+						<p>Precursors C</p>
+						<label for="C1" style="font-size: 20px">B1</label>
+						<input type="text" id="C1" name="C1" style="width: 150px;" value="temp" readonly><br><br>
+						<label for="C2" style="font-size: 20px">B2</label>
+						<input type="text" id="C2" name="C2" style="width: 150px;" value="temp" readonly><br><br>
+						<label for="C3" style="font-size: 20px">B3</label>
+						<input type="text" id="C3" name="C3" style="width: 150px;" value="temp" readonly><br><br>
+					</form>
+  				</div>
+  				<div class="tab-pane fade" id="doses" role="tabpanel" aria-labelledby="doses-tab">
+  						
+  				</div>
+  				<div class="tab-pane fade" id="data" role="tabpanel" aria-labelledby="data-tab">
+  					
+  				</div>
+  			</div>
+		</div>
 	</div>
 	<h3>Thermocouple 1</h3>
 	<div class="col-md-2">
