@@ -13,116 +13,179 @@
 	<title>ALD Interface</title>
 </head>
 
-<body style="margin:2%;padding:0">
-	<% console.log(data.exe_table[0]) %>
-	<h5> <%= data.data_log[0]['Timestamp'] %> </h5>
-	<div class="row">
-		<div class="text-end">
-      	<a href="/auth/logout" class="btn btn-danger">Log out</a>
-    	</div>
-    	<div class="col-2">
-			<h2>
-				<form action="/action_page.php">
-					<label for="CP" style="font-size: 20px">Chamber Pressure </label>
-					<input type="text" id="CP" name="CP" style="width: 200px;" value="<%= data.data_log[0]['Chamber Pressure'] %>" readonly><br><br>
-				</form>
-			</h2>
-		</div>
-		<div class="col-2">
-			<h2>
-				<form action="/action_page.php">
-					<label for="CP" style="font-size: 20px">Mass Change </label>
-					<input type="text" id="CP" name="CP" style="width: 250px;" value="<%= data.data_log[0]['Mass Offset'] %>" readonly><br><br>
-				</form>
-			</h2>
-		</div>
-		<div class="col-2">
-			<h2>
-				<form action="/action_page.php">
-					<label for="RS" style="font-size: 20px">Recipe Step </label>
-					<input type="text" id="RS" name="RS" style="width: 200px;" value="<%= data.exe_table[0]['Recipe Step'] %>" readonly><br><br>
-				</form>
-			</h2>
-		</div>
-		<div class="col-6">	</div>
-		<div class="col-6"> 
-			<ul class="nav nav-tabs" id="myTab" role="tablist">
-  				<li class="nav-item">
-    				<a class="nav-link active" id="precursor-tab" data-toggle="tab" href="#precursor" role="tab" aria-controls="precursor" aria-selected="true">Precursors</a>
-  				</li>
-  				<li class="nav-item">
-    				<a class="nav-link" id="doses-tab" data-toggle="tab" href="#doses" role="tab" aria-controls="doses" aria-selected="false">Doses</a>
-  				</li>
-  				<li class="nav-item">
-		    		<a class="nav-link" id="data-tab" data-toggle="tab" href="#data" role="tab" aria-controls="data" aria-selected="false">Data</a>
-  				</li>
-			</ul>
-			<div class="tab-content" id="myTabContent">
-  				<div class="tab-pane fade show active" id="precursor" role="tabpanel" aria-labelledby="precursor-tab">
-  					<form action="/action_page.php">
-						<p>Precursors A</p>
-						<label for="A1" style="font-size: 20px">A1</label>
-						<input type="text" id="A1" name="A1" style="width: 150px;" value="<%= data.exe_table[0]['Precursors'] %>" readonly><br><br>
-						<label for="A2" style="font-size: 20px">A2</label>
-						<input type="text" id="A2" name="A2" style="width: 150px;" value="temp" readonly><br><br>
-						<label for="A3" style="font-size: 20px">A3</label>
-						<input type="text" id="A3" name="A3" style="width: 150px;" value="temp" readonly><br><br>
-					</form>
-					<form action="/action_page.php">
-						<p>Precursors B</p>
-						<label for="B1" style="font-size: 20px">B1</label>
-						<input type="text" id="B1" name="B1" style="width: 150px;" value="temp" readonly><br><br>
-						<label for="B2" style="font-size: 20px">B2</label>
-						<input type="text" id="B2" name="B2" style="width: 150px;" value="temp" readonly><br><br>
-						<label for="B3" style="font-size: 20px">B3</label>
-						<input type="text" id="B3" name="B3" style="width: 150px;" value="temp" readonly><br><br>
-					</form>
-					<form action="/action_page.php">
-						<p>Precursors C</p>
-						<label for="C1" style="font-size: 20px">B1</label>
-						<input type="text" id="C1" name="C1" style="width: 150px;" value="temp" readonly><br><br>
-						<label for="C2" style="font-size: 20px">B2</label>
-						<input type="text" id="C2" name="C2" style="width: 150px;" value="temp" readonly><br><br>
-						<label for="C3" style="font-size: 20px">B3</label>
-						<input type="text" id="C3" name="C3" style="width: 150px;" value="temp" readonly><br><br>
-					</form>
-  				</div>
-  				<div class="tab-pane fade" id="doses" role="tabpanel" aria-labelledby="doses-tab">
-  						
-  				</div>
-  				<div class="tab-pane fade" id="data" role="tabpanel" aria-labelledby="data-tab">
-  					
-  				</div>
-  			</div>
-		</div>
-	</div>
-	<h3>Thermocouple 1</h3>
-	<div class="col-md-2">
+<body>
+	<div class="container">
+		<h5 class="mt-3"><%= data.data_log[0]['Timestamp'] %></h5>
 
-		<div class="progress">
-			<div class="progress-bar" role="progressbar"
-				style="width: <%= parseInt(data.data_log[0]['Thermocouple 1']) / 2 %>%" aria-valuenow="25" aria-valuemin="0"
-				aria-valuemax="200"><%= data.data_log[0]['Thermocouple 1'] %></div>
+		<div class="row">
+			<div class="text-end">
+				<a href="/auth/logout" class="btn btn-danger">Log out</a>
+			</div>
 		</div>
-		<h3>Thermocouple 2</h3>
-		<div class="progress">
-			<div class="progress-bar" role="progressbar"
-				style="width: <%= parseInt(data.data_log[0]['Thermocouple 2']) / 2 %>%" aria-valuenow="25" aria-valuemin="0"
-				aria-valuemax="200"><%= data.data_log[0]['Thermocouple 2'] %></div>
+
+		<div class="row">
+			<div class="col-2">
+				<label for="chamber">Chamber Pressure:</label>
+				<input type="text" id="chamber" value="<%= data.data_log[0]['Chamber Pressure'] %>" readonly>
+			</div>
+
+			<div class="col-2">
+				<label for="mchange">Mass Change:</label>
+				<input type="text" id="mchange" value="<%= data.data_log[0]['Mass Offset'] %>" readonly>
+			</div>
+
+			<div class="col-2">
+				<label for="rstep">Recipe Step:</label>
+				<input type="text" id="step" value="<%= data.exe_table[0]['Recipe Step'] %>" readonly>
+			</div>
+
 		</div>
-		<h3>Thermocouple 3</h3>
-		<div class="progress">
-			<div class="progress-bar" role="progressbar"
-				style="width: <%= parseInt(data.data_log[0]['Thermocouple 3']) / 2 %>%" aria-valuenow="25" aria-valuemin="0"
-				aria-valuemax="200"><%= data.data_log[0]['Thermocouple 3'] %></div>
+
+		<div class="row mt-3">
+			<div class="col-6">
+
+				<ul class="nav nav-tabs" id="myTab" role="tablist">
+					<li class="nav-item" role="presentation">
+						<button class="nav-link active" id="precursors-tab" data-bs-toggle="tab" data-bs-target="#precursors"
+							type="button" role="tab">Precursors</button>
+					</li>
+					<li class="nav-item" role="presentation">
+						<button class="nav-link" id="doses-tab" data-bs-toggle="tab" data-bs-target="#doses" type="button"
+							role="tab">Doses</button>
+					</li>
+					<li class="nav-item" role="presentation">
+						<button class="nav-link" id="data-tab" data-bs-toggle="tab" data-bs-target="#data" type="button" role="tab"
+							aria-controls="contact" aria-selected="false">Data</button>
+					</li>
+				</ul>
+
+				<div class="tab-content" id="myTabContent">
+					<div class="tab-pane fade show active mt-3" id="precursors" role="tabpanel">
+						<div class="row">
+							<div class="col-6">
+
+								<h3>Precursors A:</h3>
+								<p>A1: <%= data.exe_table[0]['Precursors'] %></p>
+								<p>A2: </p>
+								<p>A3: </p>
+							</div>
+
+							<div class="col-6">
+
+								<h3>Precursors B:</h3>
+								<p>B1: <%= data.exe_table[0]['Precursors'] %></p>
+								<p>B2: </p>
+								<p>B3: </p>
+							</div>
+
+						</div>
+
+						<div class="row">
+							<div class="col-6">
+
+								<h3>Precursors C:</h3>
+								<p>C1: <%= data.exe_table[0]['Precursors'] %></p>
+								<p>C2: </p>
+								<p>C3: </p>
+							</div>
+
+							<div class="col-6">
+
+								<h3>Precursors D:</h3>
+								<p>D1: <%= data.exe_table[0]['Precursors'] %></p>
+								<p>D2: </p>
+								<p>D3: </p>
+							</div>
+
+						</div>
+					</div>
+
+					<div class="tab-pane fade mt-3" id="doses" role="tabpanel">
+						<p>Doses information here</p>
+					</div>
+
+					<div class="tab-pane fade mt-3" id="data" role="tabpanel">
+						<p>Data information here</p>
+					</div>
+
+				</div>
+			</div>
+
+			<div class="col-6">
+				<div class="card mb-3">
+					<div class="card-body">
+						<p>Graphs go here?</p>
+					</div>
+				</div>
+				<div class="card mb-3">
+					<div class="card-body">
+						<p>Graphs go here?</p>
+					</div>
+				</div>
+				<div class="card mb-3">
+					<div class="card-body">
+						<p>Graphs go here?</p>
+					</div>
+				</div>
+				<div class="card mb-3">
+					<div class="card-body">
+						<p>Graphs go here?</p>
+					</div>
+				</div>
+				<div class="card mb-3">
+					<div class="card-body">
+						<p>Graphs go here?</p>
+					</div>
+				</div>
+			</div>
+
 		</div>
-		<h3>Thermocouple 4</h3>
-		<div class="progress">
-			<div class="progress-bar" role="progressbar"
-				style="width: <%= parseInt(data.data_log[0]['Thermocouple 4']) / 2 %>%" aria-valuenow="25" aria-valuemin="0"
-				aria-valuemax="200"><%= data.data_log[0]['Thermocouple 4'] %></div>
+
+		<div class="row mt-3">
+			<div class="col-6">
+				<div class="mb-3">
+					<h3>Thermocouple 1</h3>
+					<div class="progress">
+						<div class="progress-bar" role="progressbar"
+							style="width: <%= parseInt(data.data_log[0]['Thermocouple 1']) / 2 %>%">
+							<%= data.data_log[0]['Thermocouple 1'] %></div>
+					</div>
+				</div>
+
+				<div class="mb-3">
+					<h3>Thermocouple 2</h3>
+					<div class="progress">
+						<div class="progress-bar" role="progressbar"
+							style="width: <%= parseInt(data.data_log[0]['Thermocouple 2']) / 2 %>%">
+							<%= data.data_log[0]['Thermocouple 2'] %></div>
+					</div>
+				</div>
+
+				<div class="mb-3">
+					<h3>Thermocouple 3</h3>
+					<div class="progress">
+						<div class="progress-bar" role="progressbar"
+							style="width: <%= parseInt(data.data_log[0]['Thermocouple 3']) / 2 %>%">
+							<%= data.data_log[0]['Thermocouple 3'] %></div>
+					</div>
+				</div>
+
+				<div class="mb-3">
+					<h3>Thermocouple 4</h3>
+					<div class="progress">
+						<div class="progress-bar" role="progressbar"
+							style="width: <%= parseInt(data.data_log[0]['Thermocouple 4']) / 2 %>%">
+							<%= data.data_log[0]['Thermocouple 4'] %></div>
+					</div>
+				</div>
+			</div>
 		</div>
+
 	</div>
+
+
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
