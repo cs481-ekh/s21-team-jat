@@ -7,7 +7,7 @@ import os
 
 
 def interrupt_handler(signal, frame):
-    print("Cleaning up.")
+    print("\nCleaning up.")
     datalog_original.close()
     delta_original.close()
     exe_original.close()
@@ -20,6 +20,8 @@ def interrupt_handler(signal, frame):
 
     shutil.copyfile('test_files_copy/20190524_Run1_TMA-H2O-50cycles_TMA-10Pulses_TMA-H2O-20cycles_425C_GaPO4_ExecutionTable.txt',
                     'test_files/20190524_Run1_TMA-H2O-50cycles_TMA-10Pulses_TMA-H2O-20cycles_425C_GaPO4_ExecutionTable.txt')
+
+    shutil.copyfile('data_json/template.json', 'data_json/past_data.json')
 
     shutil.rmtree('test_files_copy')
 
@@ -40,6 +42,7 @@ shutil.copyfile('test_files/20190524_Run1_TMA-H2O-50cycles_TMA-10Pulses_TMA-H2O-
 
 shutil.copyfile('test_files/20190524_Run1_TMA-H2O-50cycles_TMA-10Pulses_TMA-H2O-20cycles_425C_GaPO4_ExecutionTable.txt',
                 'test_files_copy/20190524_Run1_TMA-H2O-50cycles_TMA-10Pulses_TMA-H2O-20cycles_425C_GaPO4_ExecutionTable.txt')
+
 
 # Open the copied files
 datalog_original = open(
