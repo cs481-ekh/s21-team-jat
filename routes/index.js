@@ -7,9 +7,7 @@ const parse = require('../parse');
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
-  res.render('index', {
-    title: 'Express'
-  });
+  res.render('index');
 });
 
 router.get('/dashboard', cel.ensureLoggedIn("/login"), function (req, res) {
