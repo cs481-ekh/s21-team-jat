@@ -9,6 +9,9 @@
     "dev": "DEBUG=ald-monitor:* nodemon ./bin/www",
     "test": "nyc mocha --exit && python3 python/test_read_data_unittest.py"
   },
+  "nodemonConfig": {
+    "ignore": ["data_json/*", "public/*"]
+  },
   "dependencies": {
     "connect-ensure-login": "^0.1.1",
     "cookie-parser": "~1.4.4",
