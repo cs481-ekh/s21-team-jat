@@ -3,11 +3,14 @@ var socket = io();
 $(function () {
 
   $.get("/getData", function (data) {
+
+    // Skeleton for chamber pressure chart
     var pumpData = {
       x: [],
       y: []
     };
 
+    // Skeleton for flow rate chart
     var flowData = {
       x: [],
       1: {
@@ -27,6 +30,7 @@ $(function () {
       }
     };
 
+    // Add data to the charts
     data.data_log.forEach(function (value, index) {
       pumpData.x.push(value.Timestamp);
       pumpData.y.push(value["Chamber Pressure"]);
@@ -41,6 +45,7 @@ $(function () {
 
 
 
+    // Pressure chart options
     var ctxPressure = $("#chamber-pressure");
     var pressureChart = new Chart(ctxPressure, {
       type: 'line',
@@ -59,6 +64,7 @@ $(function () {
       }
     });
 
+    // Flow rate chart options
     var ctxFlow = $("#flow");
     var flowChart = new Chart(ctxFlow, {
       type: 'line',
@@ -113,36 +119,43 @@ $(function () {
       }
     });
 
+    // When we recieve an update from the websocket
     socket.on("update", function (single) {
-      if (data.data_log.length == 0 || data.data_log[data.timestamp.length - 1].Timestamp !== single.data_log[0].Timestamp) {
-        if (pressureChart.data.labels.length >= 360) {
-          pressureChart.data.labels.shift();
-          pressureChart.data.datasets[0].data.shift();
 
-          flowChart.data.labels.shift();
-          flowChart.data.datasets[0].data.shift();
-          flowChart.data.datasets[1].data.shift();
-          flowChart.data.datasets[2].data.shift();
-          flowChart.data.datasets[3].data.shift();
-          flowChart.data.datasets[4].data.shift();
-        }
+      // Start sliding the graph (removing the first element) if it has been > 30 minutes
+      if (pressureChart.data.labels.length >= 360) {
+        pressureChart.data.labels.shift();
+        pressureChart.data.datasets[0].data.shift();
 
-        pressureChart.data.labels.push(single.data_log[0].Timestamp);
-        pressureChart.data.datasets[0].data.push(single.data_log[0]["Chamber Pressure"]);
-
-        flowChart.data.labels.push(single.data_log[0].Timestamp);
-        flowChart.data.datasets[0].data.push(single.data_log[0]["MFC 1 Flow"]);
-        flowChart.data.datasets[1].data.push(single.data_log[0]["MFC 2 Flow"]);
-        flowChart.data.datasets[2].data.push(single.data_log[0]["MFC 3 Flow"]);
-        flowChart.data.datasets[3].data.push(single.data_log[0]["MFC 4 Flow"]);
-        flowChart.data.datasets[4].data.push(single.data_log[0]["MFC 5 Flow"]);
-
-        pressureChart.update();
-        flowChart.update();
+        flowChart.data.labels.shift();
+        flowChart.data.datasets[0].data.shift();
+        flowChart.data.datasets[1].data.shift();
+        flowChart.data.datasets[2].data.shift();
+        flowChart.data.datasets[3].data.shift();
+        flowChart.data.datasets[4].data.shift();
       }
+
+      // Add labels and data to the chamber pressure chart
+      pressureChart.data.labels.push(single.data_log[0].Timestamp);
+      pressureChart.data.datasets[0].data.push(single.data_log[0]["Chamber Pressure"]);
+
+      // Add labels and data to the flow rate chart
+      flowChart.data.labels.push(single.data_log[0].Timestamp);
+      flowChart.data.datasets[0].data.push(single.data_log[0]["MFC 1 Flow"]);
+      flowChart.data.datasets[1].data.push(single.data_log[0]["MFC 2 Flow"]);
+      flowChart.data.datasets[2].data.push(single.data_log[0]["MFC 3 Flow"]);
+      flowChart.data.datasets[3].data.push(single.data_log[0]["MFC 4 Flow"]);
+      flowChart.data.datasets[4].data.push(single.data_log[0]["MFC 5 Flow"]);
+
+      // Update the charts
+      pressureChart.update();
+      flowChart.update();
+
+      // Update elements on the page
+      $("#timestamp").text("Latest Timestamp: " + single.data_log[0].Timestamp);
+
     });
 
-    console.log(pumpData);
   });
 
 
