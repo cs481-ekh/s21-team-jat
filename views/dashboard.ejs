@@ -14,7 +14,7 @@
 
 <body>
 	<div class="container">
-		<h5 class="mt-3">Latest Timestamp: <%= data.data_log[0]['Timestamp'] %></h5>
+		<h5 class="mt-3" id="timestamp">Latest Timestamp: <%= data.data_log[0]['Timestamp'] %></h5>
 
 		<div class="mt-3 mb-3">
 			<div class="text-end">
@@ -120,7 +120,7 @@
 							<div class="progress mb-3">
 								<div class="progress-bar" role="progressbar"
 									style="width: <%= parseInt(data.data_log[0]['Thermocouple 1']) / 2 %>%">
-									<%= data.data_log[0]['Thermocouple 1'] %></div>
+									<%= data.data_log[0]['Thermocouple 1'] + "°C" %></div>
 							</div>
 
 							<div class="mb-3">
@@ -128,7 +128,7 @@
 								<div class="progress mb-3">
 									<div class="progress-bar" role="progressbar"
 										style="width: <%= parseInt(data.data_log[0]['Thermocouple 2']) / 2 %>%">
-										<%= data.data_log[0]['Thermocouple 2'] %></div>
+										<%= data.data_log[0]['Thermocouple 2'] + "°C" %></div>
 								</div>
 							</div>
 
@@ -137,7 +137,7 @@
 								<div class="progress mb-3">
 									<div class="progress-bar" role="progressbar"
 										style="width: <%= parseInt(data.data_log[0]['Thermocouple 3']) / 2 %>%">
-										<%= data.data_log[0]['Thermocouple 3'] %></div>
+										<%= data.data_log[0]['Thermocouple 3'] + "°C" %></div>
 								</div>
 							</div>
 
@@ -146,7 +146,7 @@
 								<div class="progress mb-3">
 									<div class="progress-bar" role="progressbar"
 										style="width: <%= parseInt(data.data_log[0]['Thermocouple 4']) / 2 %>%">
-										<%= data.data_log[0]['Thermocouple 4'] %></div>
+										<%= data.data_log[0]['Thermocouple 4'] + "°C" %></div>
 								</div>
 							</div>
 
