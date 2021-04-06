@@ -204,9 +204,9 @@ $(function () {
       $("#pump-pressure").text(single.data_log[0]["Pump Pressure"]);
       $("#xtal-ok").text(single.data_log[0]["Xtal OK?"]);
       $("#xtal-life").text(single.data_log[0]["Xtal Life"]);
-      $("#mass").text(single.data_log[0]["Mass"] + " ng/cm²");
+      $("#mass").text(single.data_log[0].Mass + " ng/cm²");
       $("#mass-offset").text(single.data_log[0]["Mass Offset"] + " ng/cm²");
-      $("#frequency").text(single.data_log[0]["Frequency"] + "s");
+      $("#frequency").text(single.data_log[0].Frequency + "s");
       $("#iteration-duration").text(single.data_log[0]["Iteration Duration"] + "s");
 
       // Thermocouples
