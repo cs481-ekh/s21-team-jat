@@ -156,7 +156,6 @@ $(function () {
       flowChart.update();
 
       // Update elements on the page
-
       // Top of page fields
       $("#timestamp").text("Latest Timestamp: " + new Date(single.data_log[0].Timestamp).toLocaleDateString("en-US") + " " + new Date(single.data_log[0].Timestamp).toLocaleTimeString("en-US"));
       $("#chamber").val(single.data_log[0]['Chamber Pressure'] + " Torr");
