@@ -20,7 +20,7 @@ chokidar.watch('./data_json/data.json', {
     parse("data_json/past_data.json", function (many) {
 
       // Don't add the same entry twice
-      if (many.data_log.length == 0 || many.data_log[many.data_log.length - 1].Timestamp !== single.data_log[0].Timestamp) {
+      if (many.data_log.length == 0 || many.data_log[many.data_log.length - 1].Timestamp.getTime() != single.data_log[0].Timestamp.getTime()) {
 
         // Send an update event to all connected clients
         io.emit("update", single);

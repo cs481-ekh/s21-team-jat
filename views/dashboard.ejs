@@ -147,17 +147,17 @@
 
 										<tr>
 											<td>Initial Mass:</td>
-											<td id="initial-mass"><%= data.doses_delta[0]["Initial Mass"] %>ng/cm²</td>
+											<td id="initial-mass"><%= data.doses_delta[0]["Initial Mass"] %> ng/cm²</td>
 										</tr>
 
 										<tr>
 											<td>Final Mass:</td>
-											<td id="final-mass"><%= data.doses_delta[0]["Final Mass"] %>ng/cm²</td>
+											<td id="final-mass"><%= data.doses_delta[0]["Final Mass"] %> ng/cm²</td>
 										</tr>
 
 										<tr>
 											<td>delta-M:</td>
-											<td id="delta-m"><%= data.doses_delta[0]["delta-M"] %>ng/cm²</td>
+											<td id="delta-m"><%= data.doses_delta[0]["delta-M"] %> ng/cm²</td>
 										</tr>
 									</tbody>
 								</table>
@@ -282,7 +282,7 @@
 						<div class="mb-3">
 							<h3>Thermocouple 1</h3>
 							<div class="progress mb-3">
-								<div class="progress-bar" role="progressbar"
+								<div class="progress-bar" id="tc-1" role="progressbar"
 									style="width: <%= parseInt(data.data_log[0]['Thermocouple 1']) / 2 %>%">
 									<%= data.data_log[0]['Thermocouple 1'] + "°C" %></div>
 							</div>
@@ -290,7 +290,7 @@
 							<div class="mb-3">
 								<h3>Thermocouple 2</h3>
 								<div class="progress mb-3">
-									<div class="progress-bar" role="progressbar"
+									<div class="progress-bar" id="tc-2" role="progressbar"
 										style="width: <%= parseInt(data.data_log[0]['Thermocouple 2']) / 2 %>%">
 										<%= data.data_log[0]['Thermocouple 2'] + "°C" %></div>
 								</div>
@@ -299,7 +299,7 @@
 							<div class="mb-3">
 								<h3>Thermocouple 3</h3>
 								<div class="progress mb-3">
-									<div class="progress-bar" role="progressbar"
+									<div class="progress-bar" id="tc-3" role="progressbar"
 										style="width: <%= parseInt(data.data_log[0]['Thermocouple 3']) / 2 %>%">
 										<%= data.data_log[0]['Thermocouple 3'] + "°C" %></div>
 								</div>
@@ -308,7 +308,7 @@
 							<div class="mb-3">
 								<h3>Thermocouple 4</h3>
 								<div class="progress mb-3">
-									<div class="progress-bar" role="progressbar"
+									<div class="progress-bar" id="tc-4" role="progressbar"
 										style="width: <%= parseInt(data.data_log[0]['Thermocouple 4']) / 2 %>%">
 										<%= data.data_log[0]['Thermocouple 4'] + "°C" %></div>
 								</div>
@@ -326,35 +326,43 @@
 								<h3>Mod7</h3>
 								<div class="form-check form-switch">
 									<label class="form-check-label float" for="mod7-0">Mod7/do0</label>
-									<input class="form-check-input float-end" type="checkbox" id="mod7-0" disabled>
+									<input class="form-check-input float-end" type="checkbox" id="mod7-0"
+										<%= data.data_log[0]["Mod7/do0"] == 1 ? 'checked' : '' %> disabled>
 								</div>
 								<div class="form-check form-switch">
 									<label class="form-check-label" for="mod7-1">Mod7/do1</label>
-									<input class="form-check-input float-end" type="checkbox" id="mod7-1" disabled>
+									<input class="form-check-input float-end" type="checkbox" id="mod7-1"
+										<%= data.data_log[0]["Mod7/do1"] == 1 ? 'checked' : '' %> disabled>
 								</div>
 								<div class="form-check form-switch">
 									<label class="form-check-label" for="mod7-2">Mod7/do2</label>
-									<input class="form-check-input float-end" type="checkbox" id="mod7-2" disabled>
+									<input class="form-check-input float-end" type="checkbox" id="mod7-2"
+										<%= data.data_log[0]["Mod7/do2"] == 1 ? 'checked' : '' %> disabled>
 								</div>
 								<div class="form-check form-switch">
 									<label class="form-check-label" for="mod7-3">Mod7/do3</label>
-									<input class="form-check-input float-end" type="checkbox" id="mod7-3" disabled>
+									<input class="form-check-input float-end" type="checkbox" id="mod7-3"
+										<%= data.data_log[0]["Mod7/do3"] == 1 ? 'checked' : '' %> disabled>
 								</div>
 								<div class="form-check form-switch">
 									<label class="form-check-label" for="mod7-4">Mod7/do4</label>
-									<input class="form-check-input float-end" type="checkbox" id="mod7-4" disabled>
+									<input class="form-check-input float-end" type="checkbox" id="mod7-4"
+										<%= data.data_log[0]["Mod7/do4"] == 1 ? 'checked' : '' %> disabled>
 								</div>
 								<div class="form-check form-switch">
 									<label class="form-check-label" for="mod7-5">Mod7/do5</label>
-									<input class="form-check-input float-end" type="checkbox" id="mod7-5" disabled>
+									<input class="form-check-input float-end" type="checkbox" id="mod7-5"
+										<%= data.data_log[0]["Mod7/do5"] == 1 ? 'checked' : '' %> disabled>
 								</div>
 								<div class="form-check form-switch">
 									<label class="form-check-label" for="mod7-6">Mod7/do6</label>
-									<input class="form-check-input float-end" type="checkbox" id="mod7-6" disabled>
+									<input class="form-check-input float-end" type="checkbox" id="mod7-6"
+										<%= data.data_log[0]["Mod7/do6"] == 1 ? 'checked' : '' %> disabled>
 								</div>
 								<div class="form-check form-switch">
 									<label class="form-check-label" for="mod7-7">Mod7/do7</label>
-									<input class="form-check-input float-end" type="checkbox" id="mod7-7" disabled>
+									<input class="form-check-input float-end" type="checkbox" id="mod7-7"
+										<%= data.data_log[0]["Mod7/do7"] == 1 ? 'checked' : '' %> disabled>
 								</div>
 							</div>
 							<!-- Mod7 column -->
@@ -362,35 +370,43 @@
 								<h3>Mod8</h3>
 								<div class="form-check form-switch">
 									<label class="form-check-label" for="mod8-0">Mod8/do0</label>
-									<input class="form-check-input float-end" type="checkbox" id="mod8-0" checked disabled>
+									<input class="form-check-input float-end" type="checkbox" id="mod8-0"
+										<%= data.data_log[0]["Mod8/do0"] == 1 ? 'checked' : '' %> disabled>
 								</div>
 								<div class="form-check form-switch">
 									<label class="form-check-label" for="mod8-1">Mod8/do1</label>
-									<input class="form-check-input float-end" type="checkbox" id="mod8-1" checked disabled>
+									<input class="form-check-input float-end" type="checkbox" id="mod8-1"
+										<%= data.data_log[0]["Mod8/do1"] == 1 ? 'checked' : '' %> disabled>
 								</div>
 								<div class="form-check form-switch">
 									<label class="form-check-label" for="mod8-2">Mod8/do2</label>
-									<input class="form-check-input float-end" type="checkbox" id="mod8-2" checked disabled>
+									<input class="form-check-input float-end" type="checkbox" id="mod8-2"
+										<%= data.data_log[0]["Mod8/do2"] == 1 ? 'checked' : '' %> disabled>
 								</div>
 								<div class="form-check form-switch">
 									<label class="form-check-label" for="mod8-3">Mod8/do3</label>
-									<input class="form-check-input float-end" type="checkbox" id="mod8-3" checked disabled>
+									<input class="form-check-input float-end" type="checkbox" id="mod8-3"
+										<%= data.data_log[0]["Mod8/do3"] == 1 ? 'checked' : '' %> disabled>
 								</div>
 								<div class="form-check form-switch">
 									<label class="form-check-label" for="mod8-4">Mod8/do4</label>
-									<input class="form-check-input float-end" type="checkbox" id="mod8-4" checked disabled>
+									<input class="form-check-input float-end" type="checkbox" id="mod8-4"
+										<%= data.data_log[0]["Mod8/do4"] == 1 ? 'checked' : '' %> disabled>
 								</div>
 								<div class="form-check form-switch">
 									<label class="form-check-label" for="mod8-5">Mod8/do5</label>
-									<input class="form-check-input float-end" type="checkbox" id="mod8-5" checked disabled>
+									<input class="form-check-input float-end" type="checkbox" id="mod8-5"
+										<%= data.data_log[0]["Mod8/do5"] == 1 ? 'checked' : '' %> disabled>
 								</div>
 								<div class="form-check form-switch">
 									<label class="form-check-label" for="mod8-6">Mod8/do6</label>
-									<input class="form-check-input float-end" type="checkbox" id="mod8-6" checked disabled>
+									<input class="form-check-input float-end" type="checkbox" id="mod8-6"
+										<%= data.data_log[0]["Mod8/do6"] == 1 ? 'checked' : '' %> disabled>
 								</div>
 								<div class="form-check form-switch">
 									<label class="form-check-label" for="mod8-7">Mod8/do7</label>
-									<input class="form-check-input float-end" type="checkbox" id="mod8-7" checked disabled>
+									<input class="form-check-input float-end" type="checkbox" id="mod8-7"
+										<%= data.data_log[0]["Mod8/do7"] == 1 ? 'checked' : '' %> disabled>
 								</div>
 							</div>
 						</div>

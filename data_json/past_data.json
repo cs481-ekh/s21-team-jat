@@ -1,7 +1,26 @@
 {
-  "data_log": [],
-  "exe_table": [],
-  "doses_delta": [],
-  "summary": [],
-  "timestamp": []
+    "data_log": [
+        {
+            "Timestamp": "2019-05-24T17:29:03.059Z",
+            "Chamber Pressure": 1.811,
+            "MFC 1 Flow": 22.5,
+            "MFC 2 Flow": 22.6,
+            "MFC 3 Flow": 22.6,
+            "MFC 4 Flow": 22.7,
+            "MFC 5 Flow": 19.9
+        },
+        {
+            "Timestamp": "2019-05-24T18:41:59.059Z",
+            "Chamber Pressure": 1.78,
+            "MFC 1 Flow": 22.3,
+            "MFC 2 Flow": 22.7,
+            "MFC 3 Flow": 22.5,
+            "MFC 4 Flow": 22.3,
+            "MFC 5 Flow": 20.4
+        }
+    ],
+    "exe_table": [],
+    "doses_delta": [],
+    "summary": [],
+    "timestamp": []
 }
