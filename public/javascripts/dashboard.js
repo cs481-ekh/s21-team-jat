@@ -1,7 +1,9 @@
 var socket = io();
 
+// On page load
 $(function () {
 
+  // Get historical data for graphs
   $.get("/getData", function (data) {
 
     // Skeleton for chamber pressure chart
@@ -32,10 +34,11 @@ $(function () {
 
     // Add data to the charts
     data.data_log.forEach(function (value, index) {
-      pumpData.x.push(value.Timestamp);
+      var d = new Date(value.Timestamp);
+      pumpData.x.push(d.toLocaleTimeString("en-US"));
       pumpData.y.push(value["Chamber Pressure"]);
 
-      flowData.x.push(value.Timestamp);
+      flowData.x.push(d.toLocaleTimeString("en-US"));
       flowData[1].y.push(value["MFC 1 Flow"]);
       flowData[2].y.push(value["MFC 2 Flow"]);
       flowData[3].y.push(value["MFC 3 Flow"]);
@@ -136,11 +139,12 @@ $(function () {
       }
 
       // Add labels and data to the chamber pressure chart
-      pressureChart.data.labels.push(single.data_log[0].Timestamp);
+      var d = new Date(single.data_log[0].Timestamp);
+      pressureChart.data.labels.push(d.toLocaleTimeString());
       pressureChart.data.datasets[0].data.push(single.data_log[0]["Chamber Pressure"]);
 
       // Add labels and data to the flow rate chart
-      flowChart.data.labels.push(single.data_log[0].Timestamp);
+      flowChart.data.labels.push(d.toLocaleTimeString());
       flowChart.data.datasets[0].data.push(single.data_log[0]["MFC 1 Flow"]);
       flowChart.data.datasets[1].data.push(single.data_log[0]["MFC 2 Flow"]);
       flowChart.data.datasets[2].data.push(single.data_log[0]["MFC 3 Flow"]);
@@ -152,7 +156,7 @@ $(function () {
       flowChart.update();
 
       // Update elements on the page
-      $("#timestamp").text("Latest Timestamp: " + single.data_log[0].Timestamp);
+      $("#timestamp").text("Latest Timestamp: " + new Date(single.data_log[0].Timestamp).toLocaleDateString("en-US") + " " + new Date(single.data_log[0].Timestamp).toLocaleTimeString("en-US"));
 
     });
 

@@ -1,17 +1,7 @@
 {
-    "data_log": [
-        {
-            "Timestamp": "11:31:46.059 05/24/2019",
-            "Chamber Pressure": 1.8,
-            "MFC 1 Flow": 22.9,
-            "MFC 2 Flow": 22.5,
-            "MFC 3 Flow": 22.6,
-            "MFC 4 Flow": 23,
-            "MFC 5 Flow": 19.6
-        }
-    ],
-    "exe_table": [],
-    "doses_delta": [],
-    "summary": [],
-    "timestamp": []
+  "data_log": [],
+  "exe_table": [],
+  "doses_delta": [],
+  "summary": [],
+  "timestamp": []
 }
