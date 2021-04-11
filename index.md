@@ -1,37 +1,21 @@
-## Welcome to GitHub Pages
+## ALD Web Interface
 
-You can use the [editor on GitHub](https://github.com/cs481-ekh/s21-team-jat/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+### Abstract
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Atomic layer deposition (ALD) is a variation of chemical vapor deposition (CVD) and is a process for depositing thin to ultra-thin films on surfaces using surface chemical reactions. In some cases, an ALD process can require several hundred cycles, each of which may take several minutes to complete. Additional time may be required for temperature stabilization or other processing steps. Thus, the ALD operator cannot remain with the tool throughout the run.
 
-### Markdown
+Previously, remote access software (like TeamViewer) was used to monitor and control the status of a currently running ALD process. In order to facilitate collaboration with others, a password-protected web interface for monitoring the ALD process was created. This interface provides monitoring capabilities only, and doesn't provide any control to the process. Once deployed, users will be able to access this interface if the address is known along with connection to Boise State's VPN servcies. 
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+This project was divided into three parts, retrieving the data, hosting the data, and presenting the data. The first part was completed with a python script to retrieve the data. As the ALD process ran, various CSV files were saved to a location containing all the generated data. With use of Python, data was to be extracted from those files and saved to a JSON file. The second part was the development of a Docker image of NodeJS + Express server that will be used to host the web interface and read the data the JSON file. From there, the web server will authenticate the user and allow access to the web frontend that will display the visualizations and data from the ALD process. The third part, the web frontend will be developed using HTML, CSS, and JavaScript and contains the various data fields and graphs to help visualize the data in a meaningful way.  
 
-```markdown
-Syntax highlighted code block
 
-# Header 1
-## Header 2
-### Header 3
+## Architectural Diagram
+![Image](/cs481.PNG)
 
-- Bulleted
-- List
+### Members
+- Aidan Van Leuven
+- Joe Gibson
+- Thomas Reinking
 
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/cs481-ekh/s21-team-jat/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+### Project Demo:
+Coming Soon
