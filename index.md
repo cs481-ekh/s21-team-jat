@@ -18,7 +18,7 @@ This project was divided into three parts, retrieving the data, hosting the data
 - Thomas Reinking
 
 ### Project Demo:
-Coming Soon
+[Link to Demo](https://www.youtube.com/watch?v=IQVHthhIJsw)
 
 ### Description 
 The first part is retrieving the data. When running on the production environmnet, where the ALD process is running, the ALD process generates various different text 
