@@ -1,0 +1,10 @@
+Test_Summary.txt
+User:	Sara Kuraitis
+Furnace Temp. [ºC]:	200.000000
+Notes:	This is a simulation test.
+Graph/Process Start Timestamp:   	15:41:52.044 04/18/2021
+Precursors:	A1=TMA, A2=TMGa, A3=TiCl4, A4=N/A, B1=H2O, B2=TBP, B3=TDMAP, B4=N/A, C1=TPS, C2=MoF6, C3=N/A, C4=N/A, D1=n/a, D2=H2S, D3=N/A, D4=N/A
+
+ALD Recipe Complete!
+200  steps executed.
+4:29:26.269 PM 4/18/2021

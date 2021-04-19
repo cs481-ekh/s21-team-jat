@@ -1,0 +1,403 @@
+Test_Doses-DeltaM.txt
+Recipe Step #	Precursor #	Precursor Name	ALD Process Type	Pulse/Fill Start Timestamp	Pulse/Fill Start Elapsed Time [s]	Hold Start Timestamp	Hold Start Elapsed Time [s]	Purge Start Timestamp	Purge Start Elapsed Time [s]	Initial Mass [ng/cm²]	Final Mass [ng/cm²]	delta-M [ng/cm²]
+
+   1	 1	TMA	1: ALD Pulse-Purge (Full Flow)	15:41:53.058 04/18/2021	    1.014	N/A	      NaN	15:41:55.065 04/18/2021	    3.021	    NaN	    NaN	    NaN
+
+   2	 5	H2O	1: ALD Pulse-Purge (Full Flow)	15:42:05.070 04/18/2021	   13.026	N/A	      NaN	15:42:06.581 04/18/2021	   14.537	    NaN	    NaN	    NaN
+
+   3	 1	TMA	1: ALD Pulse-Purge (Full Flow)	15:42:21.587 04/18/2021	   29.543	N/A	      NaN	15:42:23.596 04/18/2021	   31.552	    NaN	    NaN	    NaN
+
+   4	 5	H2O	1: ALD Pulse-Purge (Full Flow)	15:42:33.601 04/18/2021	   41.557	N/A	      NaN	15:42:35.111 04/18/2021	   43.067	    NaN	    NaN	    NaN
+
+   5	 1	TMA	1: ALD Pulse-Purge (Full Flow)	15:42:50.119 04/18/2021	   58.075	N/A	      NaN	15:42:52.126 04/18/2021	   60.082	    NaN	    NaN	    NaN
+
+   6	 5	H2O	1: ALD Pulse-Purge (Full Flow)	15:43:02.131 04/18/2021	   70.087	N/A	      NaN	15:43:03.641 04/18/2021	   71.597	    NaN	    NaN	    NaN
+
+   7	 1	TMA	1: ALD Pulse-Purge (Full Flow)	15:43:18.646 04/18/2021	   86.602	N/A	      NaN	15:43:20.656 04/18/2021	   88.612	    NaN	    NaN	    NaN
+
+   8	 5	H2O	1: ALD Pulse-Purge (Full Flow)	15:43:30.665 04/18/2021	   98.621	N/A	      NaN	15:43:32.175 04/18/2021	  100.131	    NaN	    NaN	    NaN
+
+   9	 1	TMA	1: ALD Pulse-Purge (Full Flow)	15:43:47.185 04/18/2021	  115.141	N/A	      NaN	15:43:49.193 04/18/2021	  117.149	    NaN	    NaN	    NaN
+
+  10	 5	H2O	1: ALD Pulse-Purge (Full Flow)	15:43:59.199 04/18/2021	  127.156	N/A	      NaN	15:44:00.708 04/18/2021	  128.664	    NaN	    NaN	    NaN
+
+  11	 1	TMA	1: ALD Pulse-Purge (Full Flow)	15:44:15.718 04/18/2021	  143.674	N/A	      NaN	15:44:17.729 04/18/2021	  145.685	    NaN	    NaN	    NaN
+
+  12	 5	H2O	1: ALD Pulse-Purge (Full Flow)	15:44:27.735 04/18/2021	  155.692	N/A	      NaN	15:44:29.243 04/18/2021	  157.200	    NaN	    NaN	    NaN
+
+  13	 1	TMA	1: ALD Pulse-Purge (Full Flow)	15:44:44.253 04/18/2021	  172.210	N/A	      NaN	15:44:46.260 04/18/2021	  174.216	    NaN	    NaN	    NaN
+
+  14	 5	H2O	1: ALD Pulse-Purge (Full Flow)	15:44:56.267 04/18/2021	  184.223	N/A	      NaN	15:44:57.775 04/18/2021	  185.732	    NaN	    NaN	    NaN
+
+  15	 1	TMA	1: ALD Pulse-Purge (Full Flow)	15:45:12.785 04/18/2021	  200.742	N/A	      NaN	15:45:14.795 04/18/2021	  202.752	    NaN	    NaN	    NaN
+
+  16	 5	H2O	1: ALD Pulse-Purge (Full Flow)	15:45:24.805 04/18/2021	  212.761	N/A	      NaN	15:45:26.313 04/18/2021	  214.269	    NaN	    NaN	    NaN
+
+  17	 1	TMA	1: ALD Pulse-Purge (Full Flow)	15:45:41.320 04/18/2021	  229.276	N/A	      NaN	15:45:43.328 04/18/2021	  231.285	    NaN	    NaN	    NaN
+
+  18	 5	H2O	1: ALD Pulse-Purge (Full Flow)	15:45:53.338 04/18/2021	  241.294	N/A	      NaN	15:45:54.847 04/18/2021	  242.803	    NaN	    NaN	    NaN
+
+  19	 1	TMA	1: ALD Pulse-Purge (Full Flow)	15:46:09.853 04/18/2021	  257.809	N/A	      NaN	15:46:11.860 04/18/2021	  259.816	    NaN	    NaN	    NaN
+
+  20	 5	H2O	1: ALD Pulse-Purge (Full Flow)	15:46:21.869 04/18/2021	  269.825	N/A	      NaN	15:46:23.377 04/18/2021	  271.333	    NaN	    NaN	    NaN
+
+  21	 1	TMA	1: ALD Pulse-Purge (Full Flow)	15:46:38.386 04/18/2021	  286.342	N/A	      NaN	15:46:40.398 04/18/2021	  288.354	    NaN	    NaN	    NaN
+
+  22	 5	H2O	1: ALD Pulse-Purge (Full Flow)	15:46:50.408 04/18/2021	  298.364	N/A	      NaN	15:46:51.916 04/18/2021	  299.872	    NaN	    NaN	    NaN
+
+  23	 1	TMA	1: ALD Pulse-Purge (Full Flow)	15:47:06.922 04/18/2021	  314.878	N/A	      NaN	15:47:08.932 04/18/2021	  316.888	    NaN	    NaN	    NaN
+
+  24	 5	H2O	1: ALD Pulse-Purge (Full Flow)	15:47:18.941 04/18/2021	  326.897	N/A	      NaN	15:47:20.448 04/18/2021	  328.404	    NaN	    NaN	    NaN
+
+  25	 1	TMA	1: ALD Pulse-Purge (Full Flow)	15:47:35.453 04/18/2021	  343.409	N/A	      NaN	15:47:37.462 04/18/2021	  345.418	    NaN	    NaN	    NaN
+
+  26	 5	H2O	1: ALD Pulse-Purge (Full Flow)	15:47:47.470 04/18/2021	  355.426	N/A	      NaN	15:47:48.977 04/18/2021	  356.933	    NaN	    NaN	    NaN
+
+  27	 1	TMA	1: ALD Pulse-Purge (Full Flow)	15:48:03.985 04/18/2021	  371.941	N/A	      NaN	15:48:05.993 04/18/2021	  373.949	    NaN	    NaN	    NaN
+
+  28	 5	H2O	1: ALD Pulse-Purge (Full Flow)	15:48:15.998 04/18/2021	  383.954	N/A	      NaN	15:48:17.508 04/18/2021	  385.464	    NaN	    NaN	    NaN
+
+  29	 1	TMA	1: ALD Pulse-Purge (Full Flow)	15:48:32.517 04/18/2021	  400.473	N/A	      NaN	15:48:34.523 04/18/2021	  402.479	    NaN	    NaN	    NaN
+
+  30	 5	H2O	1: ALD Pulse-Purge (Full Flow)	15:48:44.530 04/18/2021	  412.487	N/A	      NaN	15:48:46.038 04/18/2021	  413.995	    NaN	    NaN	    NaN
+
+  31	 1	TMA	1: ALD Pulse-Purge (Full Flow)	15:49:01.047 04/18/2021	  429.004	N/A	      NaN	15:49:03.054 04/18/2021	  431.010	    NaN	    NaN	    NaN
+
+  32	 5	H2O	1: ALD Pulse-Purge (Full Flow)	15:49:13.061 04/18/2021	  441.017	N/A	      NaN	15:49:14.568 04/18/2021	  442.525	    NaN	    NaN	    NaN
+
+  33	 1	TMA	1: ALD Pulse-Purge (Full Flow)	15:49:29.578 04/18/2021	  457.535	N/A	      NaN	15:49:31.589 04/18/2021	  459.545	    NaN	    NaN	    NaN
+
+  34	 5	H2O	1: ALD Pulse-Purge (Full Flow)	15:49:41.598 04/18/2021	  469.554	N/A	      NaN	15:49:43.105 04/18/2021	  471.061	    NaN	    NaN	    NaN
+
+  35	 1	TMA	1: ALD Pulse-Purge (Full Flow)	15:49:58.114 04/18/2021	  486.070	N/A	      NaN	15:50:00.123 04/18/2021	  488.080	    NaN	    NaN	    NaN
+
+  36	 5	H2O	1: ALD Pulse-Purge (Full Flow)	15:50:10.134 04/18/2021	  498.090	N/A	      NaN	15:50:11.645 04/18/2021	  499.601	    NaN	    NaN	    NaN
+
+  37	 1	TMA	1: ALD Pulse-Purge (Full Flow)	15:50:26.653 04/18/2021	  514.609	N/A	      NaN	15:50:28.663 04/18/2021	  516.619	    NaN	    NaN	    NaN
+
+  38	 5	H2O	1: ALD Pulse-Purge (Full Flow)	15:50:38.671 04/18/2021	  526.627	N/A	      NaN	15:50:40.178 04/18/2021	  528.134	    NaN	    NaN	    NaN
+
+  39	 1	TMA	1: ALD Pulse-Purge (Full Flow)	15:50:55.184 04/18/2021	  543.140	N/A	      NaN	15:50:57.193 04/18/2021	  545.149	    NaN	    NaN	    NaN
+
+  40	 5	H2O	1: ALD Pulse-Purge (Full Flow)	15:51:07.201 04/18/2021	  555.157	N/A	      NaN	15:51:08.709 04/18/2021	  556.665	    NaN	    NaN	    NaN
+
+  41	 1	TMA	1: ALD Pulse-Purge (Full Flow)	15:51:23.715 04/18/2021	  571.671	N/A	      NaN	15:51:25.723 04/18/2021	  573.679	    NaN	    NaN	    NaN
+
+  42	 5	H2O	1: ALD Pulse-Purge (Full Flow)	15:51:35.729 04/18/2021	  583.685	N/A	      NaN	15:51:37.237 04/18/2021	  585.193	    NaN	    NaN	    NaN
+
+  43	 1	TMA	1: ALD Pulse-Purge (Full Flow)	15:51:52.246 04/18/2021	  600.202	N/A	      NaN	15:51:54.254 04/18/2021	  602.210	    NaN	    NaN	    NaN
+
+  44	 5	H2O	1: ALD Pulse-Purge (Full Flow)	15:52:04.263 04/18/2021	  612.219	N/A	      NaN	15:52:05.772 04/18/2021	  613.728	    NaN	    NaN	    NaN
+
+  45	 1	TMA	1: ALD Pulse-Purge (Full Flow)	15:52:20.780 04/18/2021	  628.736	N/A	      NaN	15:52:22.787 04/18/2021	  630.743	    NaN	    NaN	    NaN
+
+  46	 5	H2O	1: ALD Pulse-Purge (Full Flow)	15:52:32.797 04/18/2021	  640.753	N/A	      NaN	15:52:34.307 04/18/2021	  642.263	    NaN	    NaN	    NaN
+
+  47	 1	TMA	1: ALD Pulse-Purge (Full Flow)	15:52:49.317 04/18/2021	  657.273	N/A	      NaN	15:52:51.327 04/18/2021	  659.283	    NaN	    NaN	    NaN
+
+  48	 5	H2O	1: ALD Pulse-Purge (Full Flow)	15:53:01.332 04/18/2021	  669.289	N/A	      NaN	15:53:02.842 04/18/2021	  670.799	    NaN	    NaN	    NaN
+
+  49	 1	TMA	1: ALD Pulse-Purge (Full Flow)	15:53:17.851 04/18/2021	  685.807	N/A	      NaN	15:53:19.859 04/18/2021	  687.815	    NaN	    NaN	    NaN
+
+  50	 5	H2O	1: ALD Pulse-Purge (Full Flow)	15:53:29.867 04/18/2021	  697.823	N/A	      NaN	15:53:31.372 04/18/2021	  699.329	    NaN	    NaN	    NaN
+
+  51	 1	TMA	1: ALD Pulse-Purge (Full Flow)	15:53:46.383 04/18/2021	  714.340	N/A	      NaN	15:53:48.390 04/18/2021	  716.346	    NaN	    NaN	    NaN
+
+  52	 5	H2O	1: ALD Pulse-Purge (Full Flow)	15:53:58.397 04/18/2021	  726.353	N/A	      NaN	15:53:59.905 04/18/2021	  727.861	    NaN	    NaN	    NaN
+
+  53	 1	TMA	1: ALD Pulse-Purge (Full Flow)	15:54:14.914 04/18/2021	  742.870	N/A	      NaN	15:54:16.919 04/18/2021	  744.876	    NaN	    NaN	    NaN
+
+  54	 5	H2O	1: ALD Pulse-Purge (Full Flow)	15:54:26.925 04/18/2021	  754.881	N/A	      NaN	15:54:28.434 04/18/2021	  756.390	    NaN	    NaN	    NaN
+
+  55	 1	TMA	1: ALD Pulse-Purge (Full Flow)	15:54:43.443 04/18/2021	  771.399	N/A	      NaN	15:54:45.451 04/18/2021	  773.407	    NaN	    NaN	    NaN
+
+  56	 5	H2O	1: ALD Pulse-Purge (Full Flow)	15:54:55.456 04/18/2021	  783.412	N/A	      NaN	15:54:56.962 04/18/2021	  784.918	    NaN	    NaN	    NaN
+
+  57	 1	TMA	1: ALD Pulse-Purge (Full Flow)	15:55:11.968 04/18/2021	  799.924	N/A	      NaN	15:55:13.978 04/18/2021	  801.934	    NaN	    NaN	    NaN
+
+  58	 5	H2O	1: ALD Pulse-Purge (Full Flow)	15:55:23.986 04/18/2021	  811.942	N/A	      NaN	15:55:25.493 04/18/2021	  813.449	    NaN	    NaN	    NaN
+
+  59	 1	TMA	1: ALD Pulse-Purge (Full Flow)	15:55:40.499 04/18/2021	  828.455	N/A	      NaN	15:55:42.508 04/18/2021	  830.464	    NaN	    NaN	    NaN
+
+  60	 5	H2O	1: ALD Pulse-Purge (Full Flow)	15:55:52.514 04/18/2021	  840.470	N/A	      NaN	15:55:54.022 04/18/2021	  841.978	    NaN	    NaN	    NaN
+
+  61	 1	TMA	1: ALD Pulse-Purge (Full Flow)	15:56:09.030 04/18/2021	  856.986	N/A	      NaN	15:56:11.037 04/18/2021	  858.993	    NaN	    NaN	    NaN
+
+  62	 5	H2O	1: ALD Pulse-Purge (Full Flow)	15:56:21.045 04/18/2021	  869.001	N/A	      NaN	15:56:22.555 04/18/2021	  870.511	    NaN	    NaN	    NaN
+
+  63	 1	TMA	1: ALD Pulse-Purge (Full Flow)	15:56:37.566 04/18/2021	  885.522	N/A	      NaN	15:56:39.573 04/18/2021	  887.529	    NaN	    NaN	    NaN
+
+  64	 5	H2O	1: ALD Pulse-Purge (Full Flow)	15:56:49.582 04/18/2021	  897.539	N/A	      NaN	15:56:51.089 04/18/2021	  899.045	    NaN	    NaN	    NaN
+
+  65	 1	TMA	1: ALD Pulse-Purge (Full Flow)	15:57:06.094 04/18/2021	  914.050	N/A	      NaN	15:57:08.101 04/18/2021	  916.057	    NaN	    NaN	    NaN
+
+  66	 5	H2O	1: ALD Pulse-Purge (Full Flow)	15:57:18.107 04/18/2021	  926.064	N/A	      NaN	15:57:19.613 04/18/2021	  927.570	    NaN	    NaN	    NaN
+
+  67	 1	TMA	1: ALD Pulse-Purge (Full Flow)	15:57:34.619 04/18/2021	  942.576	N/A	      NaN	15:57:36.626 04/18/2021	  944.582	    NaN	    NaN	    NaN
+
+  68	 5	H2O	1: ALD Pulse-Purge (Full Flow)	15:57:46.636 04/18/2021	  954.592	N/A	      NaN	15:57:48.147 04/18/2021	  956.104	    NaN	    NaN	    NaN
+
+  69	 1	TMA	1: ALD Pulse-Purge (Full Flow)	15:58:03.153 04/18/2021	  971.110	N/A	      NaN	15:58:05.160 04/18/2021	  973.117	    NaN	    NaN	    NaN
+
+  70	 5	H2O	1: ALD Pulse-Purge (Full Flow)	15:58:15.170 04/18/2021	  983.126	N/A	      NaN	15:58:16.680 04/18/2021	  984.636	    NaN	    NaN	    NaN
+
+  71	 1	TMA	1: ALD Pulse-Purge (Full Flow)	15:58:31.686 04/18/2021	  999.642	N/A	      NaN	15:58:33.692 04/18/2021	 1001.649	    NaN	    NaN	    NaN
+
+  72	 5	H2O	1: ALD Pulse-Purge (Full Flow)	15:58:43.702 04/18/2021	 1011.658	N/A	      NaN	15:58:45.209 04/18/2021	 1013.165	    NaN	    NaN	    NaN
+
+  73	 1	TMA	1: ALD Pulse-Purge (Full Flow)	15:59:00.217 04/18/2021	 1028.173	N/A	      NaN	15:59:02.226 04/18/2021	 1030.182	    NaN	    NaN	    NaN
+
+  74	 5	H2O	1: ALD Pulse-Purge (Full Flow)	15:59:12.231 04/18/2021	 1040.187	N/A	      NaN	15:59:13.740 04/18/2021	 1041.696	    NaN	    NaN	    NaN
+
+  75	 1	TMA	1: ALD Pulse-Purge (Full Flow)	15:59:28.750 04/18/2021	 1056.706	N/A	      NaN	15:59:30.759 04/18/2021	 1058.715	    NaN	    NaN	    NaN
+
+  76	 5	H2O	1: ALD Pulse-Purge (Full Flow)	15:59:40.766 04/18/2021	 1068.722	N/A	      NaN	15:59:42.278 04/18/2021	 1070.234	    NaN	    NaN	    NaN
+
+  77	 1	TMA	1: ALD Pulse-Purge (Full Flow)	15:59:57.286 04/18/2021	 1085.242	N/A	      NaN	15:59:59.293 04/18/2021	 1087.249	    NaN	    NaN	    NaN
+
+  78	 5	H2O	1: ALD Pulse-Purge (Full Flow)	16:00:09.300 04/18/2021	 1097.256	N/A	      NaN	16:00:10.807 04/18/2021	 1098.763	    NaN	    NaN	    NaN
+
+  79	 1	TMA	1: ALD Pulse-Purge (Full Flow)	16:00:25.814 04/18/2021	 1113.770	N/A	      NaN	16:00:27.825 04/18/2021	 1115.781	    NaN	    NaN	    NaN
+
+  80	 5	H2O	1: ALD Pulse-Purge (Full Flow)	16:00:37.830 04/18/2021	 1125.786	N/A	      NaN	16:00:39.340 04/18/2021	 1127.296	    NaN	    NaN	    NaN
+
+  81	 1	TMA	1: ALD Pulse-Purge (Full Flow)	16:00:54.348 04/18/2021	 1142.304	N/A	      NaN	16:00:56.358 04/18/2021	 1144.314	    NaN	    NaN	    NaN
+
+  82	 5	H2O	1: ALD Pulse-Purge (Full Flow)	16:01:06.364 04/18/2021	 1154.321	N/A	      NaN	16:01:07.872 04/18/2021	 1155.828	    NaN	    NaN	    NaN
+
+  83	 1	TMA	1: ALD Pulse-Purge (Full Flow)	16:01:22.878 04/18/2021	 1170.834	N/A	      NaN	16:01:24.885 04/18/2021	 1172.841	    NaN	    NaN	    NaN
+
+  84	 5	H2O	1: ALD Pulse-Purge (Full Flow)	16:01:34.893 04/18/2021	 1182.849	N/A	      NaN	16:01:36.398 04/18/2021	 1184.355	    NaN	    NaN	    NaN
+
+  85	 1	TMA	1: ALD Pulse-Purge (Full Flow)	16:01:51.408 04/18/2021	 1199.365	N/A	      NaN	16:01:53.418 04/18/2021	 1201.374	    NaN	    NaN	    NaN
+
+  86	 5	H2O	1: ALD Pulse-Purge (Full Flow)	16:02:03.427 04/18/2021	 1211.383	N/A	      NaN	16:02:04.934 04/18/2021	 1212.890	    NaN	    NaN	    NaN
+
+  87	 1	TMA	1: ALD Pulse-Purge (Full Flow)	16:02:19.942 04/18/2021	 1227.898	N/A	      NaN	16:02:21.950 04/18/2021	 1229.907	    NaN	    NaN	    NaN
+
+  88	 5	H2O	1: ALD Pulse-Purge (Full Flow)	16:02:31.958 04/18/2021	 1239.914	N/A	      NaN	16:02:33.468 04/18/2021	 1241.424	    NaN	    NaN	    NaN
+
+  89	 1	TMA	1: ALD Pulse-Purge (Full Flow)	16:02:48.477 04/18/2021	 1256.433	N/A	      NaN	16:02:50.484 04/18/2021	 1258.440	    NaN	    NaN	    NaN
+
+  90	 5	H2O	1: ALD Pulse-Purge (Full Flow)	16:03:00.492 04/18/2021	 1268.448	N/A	      NaN	16:03:02.002 04/18/2021	 1269.958	    NaN	    NaN	    NaN
+
+  91	 1	TMA	1: ALD Pulse-Purge (Full Flow)	16:03:17.012 04/18/2021	 1284.968	N/A	      NaN	16:03:19.020 04/18/2021	 1286.976	    NaN	    NaN	    NaN
+
+  92	 5	H2O	1: ALD Pulse-Purge (Full Flow)	16:03:29.025 04/18/2021	 1296.981	N/A	      NaN	16:03:30.532 04/18/2021	 1298.488	    NaN	    NaN	    NaN
+
+  93	 1	TMA	1: ALD Pulse-Purge (Full Flow)	16:03:45.540 04/18/2021	 1313.496	N/A	      NaN	16:03:47.546 04/18/2021	 1315.502	    NaN	    NaN	    NaN
+
+  94	 5	H2O	1: ALD Pulse-Purge (Full Flow)	16:03:57.556 04/18/2021	 1325.512	N/A	      NaN	16:03:59.065 04/18/2021	 1327.021	    NaN	    NaN	    NaN
+
+  95	 1	TMA	1: ALD Pulse-Purge (Full Flow)	16:04:14.071 04/18/2021	 1342.027	N/A	      NaN	16:04:16.077 04/18/2021	 1344.033	    NaN	    NaN	    NaN
+
+  96	 5	H2O	1: ALD Pulse-Purge (Full Flow)	16:04:26.085 04/18/2021	 1354.041	N/A	      NaN	16:04:27.595 04/18/2021	 1355.551	    NaN	    NaN	    NaN
+
+  97	 1	TMA	1: ALD Pulse-Purge (Full Flow)	16:04:42.602 04/18/2021	 1370.558	N/A	      NaN	16:04:44.610 04/18/2021	 1372.566	    NaN	    NaN	    NaN
+
+  98	 5	H2O	1: ALD Pulse-Purge (Full Flow)	16:04:54.618 04/18/2021	 1382.575	N/A	      NaN	16:04:56.128 04/18/2021	 1384.084	    NaN	    NaN	    NaN
+
+  99	 1	TMA	1: ALD Pulse-Purge (Full Flow)	16:05:11.133 04/18/2021	 1399.089	N/A	      NaN	16:05:13.140 04/18/2021	 1401.096	    NaN	    NaN	    NaN
+
+ 100	 5	H2O	1: ALD Pulse-Purge (Full Flow)	16:05:23.149 04/18/2021	 1411.106	N/A	      NaN	16:05:24.656 04/18/2021	 1412.613	    NaN	    NaN	    NaN
+
+ 101	 1	TMA	1: ALD Pulse-Purge (Full Flow)	16:05:39.666 04/18/2021	 1427.623	N/A	      NaN	16:05:41.672 04/18/2021	 1429.628	    NaN	    NaN	    NaN
+
+ 102	 5	H2O	1: ALD Pulse-Purge (Full Flow)	16:05:51.679 04/18/2021	 1439.635	N/A	      NaN	16:05:53.188 04/18/2021	 1441.145	    NaN	    NaN	    NaN
+
+ 103	 1	TMA	1: ALD Pulse-Purge (Full Flow)	16:06:08.196 04/18/2021	 1456.153	N/A	      NaN	16:06:10.202 04/18/2021	 1458.159	    NaN	    NaN	    NaN
+
+ 104	 5	H2O	1: ALD Pulse-Purge (Full Flow)	16:06:20.212 04/18/2021	 1468.168	N/A	      NaN	16:06:21.721 04/18/2021	 1469.677	    NaN	    NaN	    NaN
+
+ 105	 1	TMA	1: ALD Pulse-Purge (Full Flow)	16:06:36.727 04/18/2021	 1484.683	N/A	      NaN	16:06:38.733 04/18/2021	 1486.690	    NaN	    NaN	    NaN
+
+ 106	 5	H2O	1: ALD Pulse-Purge (Full Flow)	16:06:48.743 04/18/2021	 1496.699	N/A	      NaN	16:06:50.253 04/18/2021	 1498.209	    NaN	    NaN	    NaN
+
+ 107	 1	TMA	1: ALD Pulse-Purge (Full Flow)	16:07:05.260 04/18/2021	 1513.216	N/A	      NaN	16:07:07.272 04/18/2021	 1515.228	    NaN	    NaN	    NaN
+
+ 108	 5	H2O	1: ALD Pulse-Purge (Full Flow)	16:07:17.280 04/18/2021	 1525.236	N/A	      NaN	16:07:18.791 04/18/2021	 1526.747	    NaN	    NaN	    NaN
+
+ 109	 1	TMA	1: ALD Pulse-Purge (Full Flow)	16:07:33.797 04/18/2021	 1541.753	N/A	      NaN	16:07:35.803 04/18/2021	 1543.759	    NaN	    NaN	    NaN
+
+ 110	 5	H2O	1: ALD Pulse-Purge (Full Flow)	16:07:45.813 04/18/2021	 1553.769	N/A	      NaN	16:07:47.324 04/18/2021	 1555.280	    NaN	    NaN	    NaN
+
+ 111	 1	TMA	1: ALD Pulse-Purge (Full Flow)	16:08:02.331 04/18/2021	 1570.287	N/A	      NaN	16:08:04.343 04/18/2021	 1572.299	    NaN	    NaN	    NaN
+
+ 112	 5	H2O	1: ALD Pulse-Purge (Full Flow)	16:08:14.348 04/18/2021	 1582.304	N/A	      NaN	16:08:15.858 04/18/2021	 1583.814	    NaN	    NaN	    NaN
+
+ 113	 1	TMA	1: ALD Pulse-Purge (Full Flow)	16:08:30.865 04/18/2021	 1598.821	N/A	      NaN	16:08:32.872 04/18/2021	 1600.828	    NaN	    NaN	    NaN
+
+ 114	 5	H2O	1: ALD Pulse-Purge (Full Flow)	16:08:42.881 04/18/2021	 1610.838	N/A	      NaN	16:08:44.387 04/18/2021	 1612.343	    NaN	    NaN	    NaN
+
+ 115	 1	TMA	1: ALD Pulse-Purge (Full Flow)	16:08:59.397 04/18/2021	 1627.353	N/A	      NaN	16:09:01.407 04/18/2021	 1629.363	    NaN	    NaN	    NaN
+
+ 116	 5	H2O	1: ALD Pulse-Purge (Full Flow)	16:09:11.413 04/18/2021	 1639.370	N/A	      NaN	16:09:12.924 04/18/2021	 1640.881	    NaN	    NaN	    NaN
+
+ 117	 1	TMA	1: ALD Pulse-Purge (Full Flow)	16:09:27.930 04/18/2021	 1655.887	N/A	      NaN	16:09:29.938 04/18/2021	 1657.894	    NaN	    NaN	    NaN
+
+ 118	 5	H2O	1: ALD Pulse-Purge (Full Flow)	16:09:39.945 04/18/2021	 1667.901	N/A	      NaN	16:09:41.453 04/18/2021	 1669.410	    NaN	    NaN	    NaN
+
+ 119	 1	TMA	1: ALD Pulse-Purge (Full Flow)	16:09:56.459 04/18/2021	 1684.415	N/A	      NaN	16:09:58.464 04/18/2021	 1686.421	    NaN	    NaN	    NaN
+
+ 120	 5	H2O	1: ALD Pulse-Purge (Full Flow)	16:10:08.474 04/18/2021	 1696.430	N/A	      NaN	16:10:09.985 04/18/2021	 1697.941	    NaN	    NaN	    NaN
+
+ 121	 1	TMA	1: ALD Pulse-Purge (Full Flow)	16:10:24.994 04/18/2021	 1712.950	N/A	      NaN	16:10:27.004 04/18/2021	 1714.961	    NaN	    NaN	    NaN
+
+ 122	 5	H2O	1: ALD Pulse-Purge (Full Flow)	16:10:37.013 04/18/2021	 1724.969	N/A	      NaN	16:10:38.520 04/18/2021	 1726.476	    NaN	    NaN	    NaN
+
+ 123	 1	TMA	1: ALD Pulse-Purge (Full Flow)	16:10:53.525 04/18/2021	 1741.481	N/A	      NaN	16:10:55.532 04/18/2021	 1743.488	    NaN	    NaN	    NaN
+
+ 124	 5	H2O	1: ALD Pulse-Purge (Full Flow)	16:11:05.541 04/18/2021	 1753.497	N/A	      NaN	16:11:07.051 04/18/2021	 1755.007	    NaN	    NaN	    NaN
+
+ 125	 1	TMA	1: ALD Pulse-Purge (Full Flow)	16:11:22.056 04/18/2021	 1770.012	N/A	      NaN	16:11:24.066 04/18/2021	 1772.022	    NaN	    NaN	    NaN
+
+ 126	 5	H2O	1: ALD Pulse-Purge (Full Flow)	16:11:34.076 04/18/2021	 1782.032	N/A	      NaN	16:11:35.584 04/18/2021	 1783.540	    NaN	    NaN	    NaN
+
+ 127	 1	TMA	1: ALD Pulse-Purge (Full Flow)	16:11:50.592 04/18/2021	 1798.548	N/A	      NaN	16:11:52.598 04/18/2021	 1800.554	    NaN	    NaN	    NaN
+
+ 128	 5	H2O	1: ALD Pulse-Purge (Full Flow)	16:12:02.604 04/18/2021	 1810.560	N/A	      NaN	16:12:04.112 04/18/2021	 1812.068	    NaN	    NaN	    NaN
+
+ 129	 1	TMA	1: ALD Pulse-Purge (Full Flow)	16:12:19.119 04/18/2021	 1827.075	N/A	      NaN	16:12:21.126 04/18/2021	 1829.082	    NaN	    NaN	    NaN
+
+ 130	 5	H2O	1: ALD Pulse-Purge (Full Flow)	16:12:31.133 04/18/2021	 1839.090	N/A	      NaN	16:12:32.639 04/18/2021	 1840.595	    NaN	    NaN	    NaN
+
+ 131	 1	TMA	1: ALD Pulse-Purge (Full Flow)	16:12:47.644 04/18/2021	 1855.600	N/A	      NaN	16:12:49.652 04/18/2021	 1857.608	    NaN	    NaN	    NaN
+
+ 132	 5	H2O	1: ALD Pulse-Purge (Full Flow)	16:12:59.659 04/18/2021	 1867.616	N/A	      NaN	16:13:01.169 04/18/2021	 1869.126	    NaN	    NaN	    NaN
+
+ 133	 1	TMA	1: ALD Pulse-Purge (Full Flow)	16:13:16.178 04/18/2021	 1884.135	N/A	      NaN	16:13:18.186 04/18/2021	 1886.142	    NaN	    NaN	    NaN
+
+ 134	 5	H2O	1: ALD Pulse-Purge (Full Flow)	16:13:28.196 04/18/2021	 1896.152	N/A	      NaN	16:13:29.703 04/18/2021	 1897.660	    NaN	    NaN	    NaN
+
+ 135	 1	TMA	1: ALD Pulse-Purge (Full Flow)	16:13:44.713 04/18/2021	 1912.670	N/A	      NaN	16:13:46.720 04/18/2021	 1914.677	    NaN	    NaN	    NaN
+
+ 136	 5	H2O	1: ALD Pulse-Purge (Full Flow)	16:13:56.731 04/18/2021	 1924.687	N/A	      NaN	16:13:58.239 04/18/2021	 1926.195	    NaN	    NaN	    NaN
+
+ 137	 1	TMA	1: ALD Pulse-Purge (Full Flow)	16:14:13.246 04/18/2021	 1941.202	N/A	      NaN	16:14:15.257 04/18/2021	 1943.213	    NaN	    NaN	    NaN
+
+ 138	 5	H2O	1: ALD Pulse-Purge (Full Flow)	16:14:25.265 04/18/2021	 1953.221	N/A	      NaN	16:14:26.772 04/18/2021	 1954.728	    NaN	    NaN	    NaN
+
+ 139	 1	TMA	1: ALD Pulse-Purge (Full Flow)	16:14:41.778 04/18/2021	 1969.734	N/A	      NaN	16:14:43.785 04/18/2021	 1971.741	    NaN	    NaN	    NaN
+
+ 140	 5	H2O	1: ALD Pulse-Purge (Full Flow)	16:14:53.791 04/18/2021	 1981.747	N/A	      NaN	16:14:55.297 04/18/2021	 1983.253	    NaN	    NaN	    NaN
+
+ 141	 1	TMA	1: ALD Pulse-Purge (Full Flow)	16:15:10.303 04/18/2021	 1998.259	N/A	      NaN	16:15:12.313 04/18/2021	 2000.269	    NaN	    NaN	    NaN
+
+ 142	 5	H2O	1: ALD Pulse-Purge (Full Flow)	16:15:22.323 04/18/2021	 2010.279	N/A	      NaN	16:15:23.832 04/18/2021	 2011.788	    NaN	    NaN	    NaN
+
+ 143	 1	TMA	1: ALD Pulse-Purge (Full Flow)	16:15:38.843 04/18/2021	 2026.799	N/A	      NaN	16:15:40.849 04/18/2021	 2028.805	    NaN	    NaN	    NaN
+
+ 144	 5	H2O	1: ALD Pulse-Purge (Full Flow)	16:15:50.857 04/18/2021	 2038.813	N/A	      NaN	16:15:52.365 04/18/2021	 2040.321	    NaN	    NaN	    NaN
+
+ 145	 1	TMA	1: ALD Pulse-Purge (Full Flow)	16:16:07.373 04/18/2021	 2055.329	N/A	      NaN	16:16:09.380 04/18/2021	 2057.336	    NaN	    NaN	    NaN
+
+ 146	 5	H2O	1: ALD Pulse-Purge (Full Flow)	16:16:19.386 04/18/2021	 2067.343	N/A	      NaN	16:16:20.895 04/18/2021	 2068.851	    NaN	    NaN	    NaN
+
+ 147	 1	TMA	1: ALD Pulse-Purge (Full Flow)	16:16:35.900 04/18/2021	 2083.856	N/A	      NaN	16:16:37.907 04/18/2021	 2085.863	    NaN	    NaN	    NaN
+
+ 148	 5	H2O	1: ALD Pulse-Purge (Full Flow)	16:16:47.915 04/18/2021	 2095.872	N/A	      NaN	16:16:49.423 04/18/2021	 2097.380	    NaN	    NaN	    NaN
+
+ 149	 1	TMA	1: ALD Pulse-Purge (Full Flow)	16:17:04.429 04/18/2021	 2112.386	N/A	      NaN	16:17:06.437 04/18/2021	 2114.393	    NaN	    NaN	    NaN
+
+ 150	 5	H2O	1: ALD Pulse-Purge (Full Flow)	16:17:16.445 04/18/2021	 2124.401	N/A	      NaN	16:17:17.956 04/18/2021	 2125.912	    NaN	    NaN	    NaN
+
+ 151	 1	TMA	1: ALD Pulse-Purge (Full Flow)	16:17:32.964 04/18/2021	 2140.920	N/A	      NaN	16:17:34.971 04/18/2021	 2142.928	    NaN	    NaN	    NaN
+
+ 152	 5	H2O	1: ALD Pulse-Purge (Full Flow)	16:17:44.981 04/18/2021	 2152.937	N/A	      NaN	16:17:46.488 04/18/2021	 2154.444	    NaN	    NaN	    NaN
+
+ 153	 1	TMA	1: ALD Pulse-Purge (Full Flow)	16:18:01.496 04/18/2021	 2169.452	N/A	      NaN	16:18:03.505 04/18/2021	 2171.461	    NaN	    NaN	    NaN
+
+ 154	 5	H2O	1: ALD Pulse-Purge (Full Flow)	16:18:13.513 04/18/2021	 2181.469	N/A	      NaN	16:18:15.019 04/18/2021	 2182.975	    NaN	    NaN	    NaN
+
+ 155	 1	TMA	1: ALD Pulse-Purge (Full Flow)	16:18:30.026 04/18/2021	 2197.982	N/A	      NaN	16:18:32.033 04/18/2021	 2199.989	    NaN	    NaN	    NaN
+
+ 156	 5	H2O	1: ALD Pulse-Purge (Full Flow)	16:18:42.040 04/18/2021	 2209.996	N/A	      NaN	16:18:43.549 04/18/2021	 2211.505	    NaN	    NaN	    NaN
+
+ 157	 1	TMA	1: ALD Pulse-Purge (Full Flow)	16:18:58.558 04/18/2021	 2226.514	N/A	      NaN	16:19:00.566 04/18/2021	 2228.522	    NaN	    NaN	    NaN
+
+ 158	 5	H2O	1: ALD Pulse-Purge (Full Flow)	16:19:10.576 04/18/2021	 2238.532	N/A	      NaN	16:19:12.083 04/18/2021	 2240.039	    NaN	    NaN	    NaN
+
+ 159	 1	TMA	1: ALD Pulse-Purge (Full Flow)	16:19:27.090 04/18/2021	 2255.046	N/A	      NaN	16:19:29.096 04/18/2021	 2257.052	    NaN	    NaN	    NaN
+
+ 160	 5	H2O	1: ALD Pulse-Purge (Full Flow)	16:19:39.105 04/18/2021	 2267.061	N/A	      NaN	16:19:40.614 04/18/2021	 2268.570	    NaN	    NaN	    NaN
+
+ 161	 1	TMA	1: ALD Pulse-Purge (Full Flow)	16:19:55.623 04/18/2021	 2283.579	N/A	      NaN	16:19:57.630 04/18/2021	 2285.586	    NaN	    NaN	    NaN
+
+ 162	 5	H2O	1: ALD Pulse-Purge (Full Flow)	16:20:07.639 04/18/2021	 2295.596	N/A	      NaN	16:20:09.147 04/18/2021	 2297.103	    NaN	    NaN	    NaN
+
+ 163	 1	TMA	1: ALD Pulse-Purge (Full Flow)	16:20:24.154 04/18/2021	 2312.110	N/A	      NaN	16:20:26.160 04/18/2021	 2314.116	    NaN	    NaN	    NaN
+
+ 164	 5	H2O	1: ALD Pulse-Purge (Full Flow)	16:20:36.167 04/18/2021	 2324.123	N/A	      NaN	16:20:37.673 04/18/2021	 2325.630	    NaN	    NaN	    NaN
+
+ 165	 1	TMA	1: ALD Pulse-Purge (Full Flow)	16:20:52.681 04/18/2021	 2340.638	N/A	      NaN	16:20:54.689 04/18/2021	 2342.646	    NaN	    NaN	    NaN
+
+ 166	 5	H2O	1: ALD Pulse-Purge (Full Flow)	16:21:04.695 04/18/2021	 2352.651	N/A	      NaN	16:21:06.201 04/18/2021	 2354.157	    NaN	    NaN	    NaN
+
+ 167	 1	TMA	1: ALD Pulse-Purge (Full Flow)	16:21:21.207 04/18/2021	 2369.163	N/A	      NaN	16:21:23.215 04/18/2021	 2371.172	    NaN	    NaN	    NaN
+
+ 168	 5	H2O	1: ALD Pulse-Purge (Full Flow)	16:21:33.224 04/18/2021	 2381.180	N/A	      NaN	16:21:34.733 04/18/2021	 2382.689	    NaN	    NaN	    NaN
+
+ 169	 1	TMA	1: ALD Pulse-Purge (Full Flow)	16:21:49.743 04/18/2021	 2397.699	N/A	      NaN	16:21:51.753 04/18/2021	 2399.709	    NaN	    NaN	    NaN
+
+ 170	 5	H2O	1: ALD Pulse-Purge (Full Flow)	16:22:01.759 04/18/2021	 2409.715	N/A	      NaN	16:22:03.267 04/18/2021	 2411.223	    NaN	    NaN	    NaN
+
+ 171	 1	TMA	1: ALD Pulse-Purge (Full Flow)	16:22:18.273 04/18/2021	 2426.229	N/A	      NaN	16:22:20.281 04/18/2021	 2428.237	    NaN	    NaN	    NaN
+
+ 172	 5	H2O	1: ALD Pulse-Purge (Full Flow)	16:22:30.288 04/18/2021	 2438.244	N/A	      NaN	16:22:31.798 04/18/2021	 2439.754	    NaN	    NaN	    NaN
+
+ 173	 1	TMA	1: ALD Pulse-Purge (Full Flow)	16:22:46.806 04/18/2021	 2454.762	N/A	      NaN	16:22:48.813 04/18/2021	 2456.769	    NaN	    NaN	    NaN
+
+ 174	 5	H2O	1: ALD Pulse-Purge (Full Flow)	16:22:58.819 04/18/2021	 2466.775	N/A	      NaN	16:23:00.325 04/18/2021	 2468.281	    NaN	    NaN	    NaN
+
+ 175	 1	TMA	1: ALD Pulse-Purge (Full Flow)	16:23:15.335 04/18/2021	 2483.291	N/A	      NaN	16:23:17.342 04/18/2021	 2485.298	    NaN	    NaN	    NaN
+
+ 176	 5	H2O	1: ALD Pulse-Purge (Full Flow)	16:23:27.347 04/18/2021	 2495.303	N/A	      NaN	16:23:28.857 04/18/2021	 2496.813	    NaN	    NaN	    NaN
+
+ 177	 1	TMA	1: ALD Pulse-Purge (Full Flow)	16:23:43.863 04/18/2021	 2511.819	N/A	      NaN	16:23:45.871 04/18/2021	 2513.827	    NaN	    NaN	    NaN
+
+ 178	 5	H2O	1: ALD Pulse-Purge (Full Flow)	16:23:55.880 04/18/2021	 2523.837	N/A	      NaN	16:23:57.387 04/18/2021	 2525.344	    NaN	    NaN	    NaN
+
+ 179	 1	TMA	1: ALD Pulse-Purge (Full Flow)	16:24:12.393 04/18/2021	 2540.350	N/A	      NaN	16:24:14.403 04/18/2021	 2542.359	    NaN	    NaN	    NaN
+
+ 180	 5	H2O	1: ALD Pulse-Purge (Full Flow)	16:24:24.411 04/18/2021	 2552.367	N/A	      NaN	16:24:25.918 04/18/2021	 2553.874	    NaN	    NaN	    NaN
+
+ 181	 1	TMA	1: ALD Pulse-Purge (Full Flow)	16:24:40.927 04/18/2021	 2568.883	N/A	      NaN	16:24:42.935 04/18/2021	 2570.892	    NaN	    NaN	    NaN
+
+ 182	 5	H2O	1: ALD Pulse-Purge (Full Flow)	16:24:52.944 04/18/2021	 2580.900	N/A	      NaN	16:24:54.453 04/18/2021	 2582.409	    NaN	    NaN	    NaN
+
+ 183	 1	TMA	1: ALD Pulse-Purge (Full Flow)	16:25:09.458 04/18/2021	 2597.414	N/A	      NaN	16:25:11.469 04/18/2021	 2599.425	    NaN	    NaN	    NaN
+
+ 184	 5	H2O	1: ALD Pulse-Purge (Full Flow)	16:25:21.479 04/18/2021	 2609.435	N/A	      NaN	16:25:22.987 04/18/2021	 2610.943	    NaN	    NaN	    NaN
+
+ 185	 1	TMA	1: ALD Pulse-Purge (Full Flow)	16:25:37.995 04/18/2021	 2625.951	N/A	      NaN	16:25:40.002 04/18/2021	 2627.958	    NaN	    NaN	    NaN
+
+ 186	 5	H2O	1: ALD Pulse-Purge (Full Flow)	16:25:50.010 04/18/2021	 2637.966	N/A	      NaN	16:25:51.519 04/18/2021	 2639.475	    NaN	    NaN	    NaN
+
+ 187	 1	TMA	1: ALD Pulse-Purge (Full Flow)	16:26:06.530 04/18/2021	 2654.486	N/A	      NaN	16:26:08.538 04/18/2021	 2656.494	    NaN	    NaN	    NaN
+
+ 188	 5	H2O	1: ALD Pulse-Purge (Full Flow)	16:26:18.544 04/18/2021	 2666.500	N/A	      NaN	16:26:20.052 04/18/2021	 2668.008	    NaN	    NaN	    NaN
+
+ 189	 1	TMA	1: ALD Pulse-Purge (Full Flow)	16:26:35.058 04/18/2021	 2683.014	N/A	      NaN	16:26:37.070 04/18/2021	 2685.026	    NaN	    NaN	    NaN
+
+ 190	 5	H2O	1: ALD Pulse-Purge (Full Flow)	16:26:47.080 04/18/2021	 2695.036	N/A	      NaN	16:26:48.588 04/18/2021	 2696.544	    NaN	    NaN	    NaN
+
+ 191	 1	TMA	1: ALD Pulse-Purge (Full Flow)	16:27:03.594 04/18/2021	 2711.550	N/A	      NaN	16:27:05.604 04/18/2021	 2713.560	    NaN	    NaN	    NaN
+
+ 192	 5	H2O	1: ALD Pulse-Purge (Full Flow)	16:27:15.613 04/18/2021	 2723.570	N/A	      NaN	16:27:17.122 04/18/2021	 2725.079	    NaN	    NaN	    NaN
+
+ 193	 1	TMA	1: ALD Pulse-Purge (Full Flow)	16:27:32.130 04/18/2021	 2740.087	N/A	      NaN	16:27:34.139 04/18/2021	 2742.095	    NaN	    NaN	    NaN
+
+ 194	 5	H2O	1: ALD Pulse-Purge (Full Flow)	16:27:44.145 04/18/2021	 2752.101	N/A	      NaN	16:27:45.652 04/18/2021	 2753.609	    NaN	    NaN	    NaN
+
+ 195	 1	TMA	1: ALD Pulse-Purge (Full Flow)	16:28:00.663 04/18/2021	 2768.620	N/A	      NaN	16:28:02.671 04/18/2021	 2770.627	    NaN	    NaN	    NaN
+
+ 196	 5	H2O	1: ALD Pulse-Purge (Full Flow)	16:28:12.677 04/18/2021	 2780.633	N/A	      NaN	16:28:14.189 04/18/2021	 2782.145	    NaN	    NaN	    NaN
+
+ 197	 1	TMA	1: ALD Pulse-Purge (Full Flow)	16:28:29.198 04/18/2021	 2797.154	N/A	      NaN	16:28:31.208 04/18/2021	 2799.165	    NaN	    NaN	    NaN
+
+ 198	 5	H2O	1: ALD Pulse-Purge (Full Flow)	16:28:41.215 04/18/2021	 2809.171	N/A	      NaN	16:28:42.725 04/18/2021	 2810.681	    NaN	    NaN	    NaN
+
+ 199	 1	TMA	1: ALD Pulse-Purge (Full Flow)	16:28:57.735 04/18/2021	 2825.691	N/A	      NaN	16:28:59.742 04/18/2021	 2827.698	    NaN	    NaN	    NaN
+
+ 200	 5	H2O	1: ALD Pulse-Purge (Full Flow)	16:29:09.752 04/18/2021	 2837.708	N/A	      NaN	16:29:11.262 04/18/2021	 2839.218	    NaN	    NaN	    NaN
+
