@@ -46,8 +46,6 @@ $(function () {
       flowData[5].y.push(value["MFC 5 Flow"]);
     });
 
-
-
     // Pressure chart options
     var ctxPressure = $("#chamber-pressure");
     var pressureChart = new Chart(ctxPressure, {
