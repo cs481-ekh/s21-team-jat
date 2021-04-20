@@ -29,6 +29,6 @@ This serves as an example, but each data field from the ALD process will be sepa
 in steps and our program only retrieves the latest step from the file. The script will write overwrite the JSON every 5 seconds by checking the data files and seeing 
 if there are any new updates. 
 
-From there (Add here... How Docker works at a basic level and how it works to set up a server, password protection, how the data is prepared for the interface, and anything else you want )
+The server is setup up with Node.js using the Express framework. Our entire project is run within a Docker container for easier updating and usage. Only a very basic authentication system was required, so we used a library called Passport for authentication with a very basic "users" file that contains login credentials. This file can be easily modified to add/remove/delete users. The server watches for changes to the JSON output file (from the python script), and begins building another JSON file. This file keeps a subset of the data for 30 minutes, which is then used to show historical data for the graphing functionality. This watcher also sends the fresh data to all connected clients, via websockets. 
 
-Now that the server has the data, we created a web interface that will display this data. 
+When the page is loaded, we use server-side rendering to do the initial page load with the most recent data from the server. Then, once we receive an update packet via our socket, we use the received data to update each of the fields, and add a data point to each graph.
