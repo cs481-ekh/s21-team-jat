@@ -24,7 +24,9 @@ This project was divided into three parts, retrieving the data, hosting the data
 The first part is retrieving the data. When running on the production environmnet, where the ALD process is running, the ALD process generates various different text 
 files. Those files get saved to a shared folder in which the server (our program) will grab those files and parse them to extract the meaningful information in them. 
 From there, we create a JSON (JavaScript Object Notation) object that can be sent to the server. Here is a sample of a JSON file. 
+
 ![Image](/cs481-json.PNG)
+
 This serves as an example, but each data field from the ALD process will be separated by the file it came from and will have it's own attribute. The ALD process runs 
 in steps and our program only retrieves the latest step from the file. The script will write overwrite the JSON every 5 seconds by checking the data files and seeing 
 if there are any new updates. 
