@@ -12,6 +12,8 @@ RUN pip3 install --upgrade pip
 RUN pip3 install pandas
 RUN npm install -g pm2
 
+RUN npm install
+
 # Build
 RUN npm run build-prod
 
