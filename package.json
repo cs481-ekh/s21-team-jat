@@ -10,9 +10,13 @@
     "test": "nyc mocha --exit && python3 python/test_read_data_unittest.py"
   },
   "nodemonConfig": {
-    "ignore": ["data_json/*", "public/*"]
+    "ignore": [
+      "data_json/*",
+      "public/*"
+    ]
   },
   "dependencies": {
+    "chokidar": "^3.5.1",
     "connect-ensure-login": "^0.1.1",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
