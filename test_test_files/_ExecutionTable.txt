@@ -1,403 +1,80 @@
-Test_ExecutionTable.txt
+test_ExecutionTable.txt
 Recipe Step	Precursor	Fill Pressure [Torr]	Dose Time [s]	Purge Time [s]	ALD Process Type
-
-       1	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-       2	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
-       3	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-       4	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
-       5	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-       6	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
-       7	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-       8	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
-       9	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-      10	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
-      11	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-      12	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
-      13	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-      14	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
-      15	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-      16	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
-      17	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-      18	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
-      19	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-      20	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
-      21	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-      22	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
-      23	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-      24	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
-      25	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-      26	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
-      27	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-      28	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
-      29	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-      30	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
-      31	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-      32	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
-      33	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-      34	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
-      35	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-      36	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
-      37	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-      38	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
-      39	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-      40	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
-      41	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-      42	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
-      43	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-      44	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
-      45	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-      46	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
-      47	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-      48	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
-      49	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-      50	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
-      51	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-      52	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
-      53	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-      54	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
-      55	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-      56	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
-      57	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-      58	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
-      59	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-      60	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
-      61	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-      62	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
-      63	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-      64	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
-      65	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-      66	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
-      67	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-      68	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
-      69	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-      70	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
-      71	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-      72	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
-      73	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-      74	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
-      75	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-      76	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
-      77	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-      78	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
-      79	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-      80	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
-      81	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-      82	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
-      83	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-      84	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
-      85	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-      86	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
-      87	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-      88	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
-      89	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-      90	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
-      91	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-      92	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
-      93	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-      94	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
-      95	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-      96	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
-      97	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-      98	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
-      99	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-     100	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
-     101	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-     102	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
-     103	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-     104	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
-     105	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-     106	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
-     107	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-     108	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
-     109	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-     110	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
-     111	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-     112	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
-     113	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-     114	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
-     115	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-     116	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
-     117	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-     118	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
-     119	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-     120	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
-     121	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-     122	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
-     123	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-     124	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
-     125	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-     126	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
-     127	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-     128	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
-     129	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-     130	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
-     131	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-     132	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
-     133	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-     134	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
-     135	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-     136	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
-     137	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-     138	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
-     139	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-     140	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
-     141	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-     142	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
-     143	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-     144	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
-     145	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-     146	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
-     147	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-     148	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
-     149	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-     150	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
-     151	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-     152	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
-     153	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-     154	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
-     155	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-     156	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
-     157	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-     158	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
-     159	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-     160	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
-     161	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-     162	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
-     163	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-     164	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
-     165	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-     166	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
-     167	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-     168	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
-     169	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-     170	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
-     171	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-     172	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
-     173	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-     174	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
-     175	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-     176	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
-     177	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-     178	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
-     179	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-     180	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
-     181	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-     182	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
-     183	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-     184	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
-     185	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-     186	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
-     187	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-     188	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
-     189	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-     190	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
-     191	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-     192	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
-     193	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-     194	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
-     195	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-     196	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
-     197	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-     198	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
-     199	TMA	N/A	    2.00	   10.00	2: ALD Pulse-Purge (Full-Flow)
-
-     200	H2O	N/A	    1.50	   15.00	2: ALD Pulse-Purge (Full-Flow)
-
+       1	None	N/A	N/A	   30.00	0: Purge
+       2	None	N/A	N/A	   30.00	0: Purge
+       3	None	N/A	N/A	N/A	4: MFC Flow Change
+       4	None	N/A	N/A	N/A	5: Temp Change
+       5	None	N/A	N/A	   30.00	0: Purge
+       6	None	N/A	N/A	N/A	6: FTIR Scan
+       7	None	N/A	N/A	   30.00	0: Purge
+       8	None	N/A	N/A	   30.00	0: Purge
+       9	TMGa	N/A	    1.00	    8.00	2: ALD Pulse-Purge (Full-Flow)
+      10	H2O	N/A	    1.50	   10.00	2: ALD Pulse-Purge (Full-Flow)
+      11	TMGa	N/A	    1.00	    8.00	2: ALD Pulse-Purge (Full-Flow)
+      12	H2O	N/A	    1.50	   10.00	2: ALD Pulse-Purge (Full-Flow)
+      13	TMGa	N/A	    1.00	    8.00	2: ALD Pulse-Purge (Full-Flow)
+      14	H2O	N/A	    1.50	   10.00	2: ALD Pulse-Purge (Full-Flow)
+      15	TMGa	N/A	    1.00	    8.00	2: ALD Pulse-Purge (Full-Flow)
+      16	H2O	N/A	    1.50	   10.00	2: ALD Pulse-Purge (Full-Flow)
+      17	TMGa	N/A	    1.00	    8.00	2: ALD Pulse-Purge (Full-Flow)
+      18	H2O	N/A	    1.50	   10.00	2: ALD Pulse-Purge (Full-Flow)
+      19	TMGa	N/A	    1.00	    8.00	2: ALD Pulse-Purge (Full-Flow)
+      20	H2O	N/A	    1.50	   10.00	2: ALD Pulse-Purge (Full-Flow)
+      21	TMGa	N/A	    1.00	    8.00	2: ALD Pulse-Purge (Full-Flow)
+      22	H2O	N/A	    1.50	   10.00	2: ALD Pulse-Purge (Full-Flow)
+      23	TMGa	N/A	    1.00	    8.00	2: ALD Pulse-Purge (Full-Flow)
+      24	H2O	N/A	    1.50	   10.00	2: ALD Pulse-Purge (Full-Flow)
+      25	TMGa	N/A	    1.00	    8.00	2: ALD Pulse-Purge (Full-Flow)
+      26	H2O	N/A	    1.50	   10.00	2: ALD Pulse-Purge (Full-Flow)
+      27	TMGa	N/A	    1.00	    8.00	2: ALD Pulse-Purge (Full-Flow)
+      28	H2O	N/A	    1.50	   10.00	2: ALD Pulse-Purge (Full-Flow)
+      29	None	N/A	N/A	   30.00	0: Purge
+      30	None	N/A	N/A	   30.00	0: Purge
+      31	TiCl4	N/A	    1.50	   10.00	2: ALD Pulse-Purge (Diversion)
+      32	H2O	N/A	    2.00	   15.00	2: ALD Pulse-Purge (Diversion)
+      33	TiCl4	N/A	    1.50	   10.00	2: ALD Pulse-Purge (Diversion)
+      34	H2O	N/A	    2.00	   15.00	2: ALD Pulse-Purge (Diversion)
+      35	TiCl4	N/A	    1.50	   10.00	2: ALD Pulse-Purge (Diversion)
+      36	H2O	N/A	    2.00	   15.00	2: ALD Pulse-Purge (Diversion)
+      37	TiCl4	N/A	    1.50	   10.00	2: ALD Pulse-Purge (Diversion)
+      38	H2O	N/A	    2.00	   15.00	2: ALD Pulse-Purge (Diversion)
+      39	TiCl4	N/A	    1.50	   10.00	2: ALD Pulse-Purge (Diversion)
+      40	H2O	N/A	    2.00	   15.00	2: ALD Pulse-Purge (Diversion)
+      41	TiCl4	N/A	    1.50	   10.00	2: ALD Pulse-Purge (Diversion)
+      42	H2O	N/A	    2.00	   15.00	2: ALD Pulse-Purge (Diversion)
+      43	TiCl4	N/A	    1.50	   10.00	2: ALD Pulse-Purge (Diversion)
+      44	H2O	N/A	    2.00	   15.00	2: ALD Pulse-Purge (Diversion)
+      45	TiCl4	N/A	    1.50	   10.00	2: ALD Pulse-Purge (Diversion)
+      46	H2O	N/A	    2.00	   15.00	2: ALD Pulse-Purge (Diversion)
+      47	TiCl4	N/A	    1.50	   10.00	2: ALD Pulse-Purge (Diversion)
+      48	H2O	N/A	    2.00	   15.00	2: ALD Pulse-Purge (Diversion)
+      49	TiCl4	N/A	    1.50	   10.00	2: ALD Pulse-Purge (Diversion)
+      50	H2O	N/A	    2.00	   15.00	2: ALD Pulse-Purge (Diversion)
+      51	None	N/A	N/A	   30.00	0: Purge
+      52	None	N/A	N/A	   30.00	0: Purge
+      53	TMGa	    3.00	    5.00	   15.00	3: ALD Fill-Hold-Purge
+      54	TDMAP	    4.00	   10.00	   30.00	3: ALD Fill-Hold-Purge
+      55	TMGa	    3.00	    5.00	   15.00	3: ALD Fill-Hold-Purge
+      56	TDMAP	    4.00	   10.00	   30.00	3: ALD Fill-Hold-Purge
+      57	TMGa	    3.00	    5.00	   15.00	3: ALD Fill-Hold-Purge
+      58	TDMAP	    4.00	   10.00	   30.00	3: ALD Fill-Hold-Purge
+      59	TMGa	    3.00	    5.00	   15.00	3: ALD Fill-Hold-Purge
+      60	TDMAP	    4.00	   10.00	   30.00	3: ALD Fill-Hold-Purge
+      61	TMGa	    3.00	    5.00	   15.00	3: ALD Fill-Hold-Purge
+      62	TDMAP	    4.00	   10.00	   30.00	3: ALD Fill-Hold-Purge
+      63	TMGa	    3.00	    5.00	   15.00	3: ALD Fill-Hold-Purge
+      64	TDMAP	    4.00	   10.00	   30.00	3: ALD Fill-Hold-Purge
+      65	TMGa	    3.00	    5.00	   15.00	3: ALD Fill-Hold-Purge
+      66	TDMAP	    4.00	   10.00	   30.00	3: ALD Fill-Hold-Purge
+      67	TMGa	    3.00	    5.00	   15.00	3: ALD Fill-Hold-Purge
+      68	TDMAP	    4.00	   10.00	   30.00	3: ALD Fill-Hold-Purge
+      69	TMGa	    3.00	    5.00	   15.00	3: ALD Fill-Hold-Purge
+      70	TDMAP	    4.00	   10.00	   30.00	3: ALD Fill-Hold-Purge
+      71	TMGa	    3.00	    5.00	   15.00	3: ALD Fill-Hold-Purge
+      72	TDMAP	    4.00	   10.00	   30.00	3: ALD Fill-Hold-Purge
+      73	None	N/A	N/A	   30.00	0: Purge
+      74	None	N/A	N/A	   30.00	0: Purge
+      75	None	N/A	N/A	N/A	4: MFC Flow Change
+      76	None	N/A	N/A	N/A	5: Temp Change
+      77	None	N/A	N/A	   30.00	0: Purge
+      78	None	N/A	N/A	   30.00	0: Purge
